@@ -1,10 +1,34 @@
+
 # Python
+
+## Spis treści
+
+1. [Spis treści](#spis-treści)
+    - [Wprowadzenie](#wprowadzenie)
+    - [Podstawowy program](#podstawowy-program)
+    - [Wyświetlanie tekstu](#wyświetlanie-tekstu)
+    - [Komentarze](#komentarze)
+2. [Zmienna](#zmienna)
+    - [Nazwy zmiennych](#nazwy-zmiennych)
+    - [Typy danych](#typy-danych)
+    - [Definicja zmiennej](#definicja-zmiennej)
+3. [Operatory arytmetyczne](#operatory-arytmetyczne)
+    - [Dodatkowe operatory przypisania](#dodatkowe-operatory-przypisania)
+4. [Komunikacja z użytkownikiem](#komunikacja-z-użytkownikiem)
+    - [Konwersje typów](#konwersje-typów)
+5. [Polecenia - komunikacja z użytkownikiem](#polecenia---komunikacja-z-użytkownikiem)
+6. [Instrukcje warunkowe](#instrukcje-warunkowe)
+    - [Operatory relacyjne](#operatory-relacyjne)
+    - [Warunki złożone](#warunki-złożone)
+    - [Konstrukcja instrukcji warunkowej](#konstrukcja-instrukcji-warunkowej)
+7. [Switch](#switch)
+8. [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
+
+## Wprowadzenie
 
 Python to język programowania wysokiego poziomu, ogólnego przeznaczenia. Jego składnia cechuje się przejrzystością i zwięzłością. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią.
 
----
-
-## Podstawowy program
+### Podstawowy program
 
 ```python
 print("Hello world!")
@@ -14,7 +38,7 @@ Powyższy program ma za zadanie wypisać, przy pomocy *funkcji* `print`, podany 
 
 > Kolejną istotną różnią jest brak średników kończących daną instrukcję.
 
-## Wyświetlanie tekstu
+### Wyświetlanie tekstu
 
 Najprostszym sposobem na komunikację z użytkownikiem jest konsola, która pomocna może okazać się również w celu prześledzenia pracy programu na różnych jego etapach.
 
@@ -29,6 +53,17 @@ Język Python pozwala na dwa główne sposoby deklarowania napisów. Do tworzeni
 *Łańcuchy znaków* można poddać **konkatenacji**, czyli ich łączeniu, sklejaniu ze sobą. W tym celu wykorzystuje się dwuargumentowy operator `+`. Wynikiem jest nowy ciąg znaków.
 
 Funkcja `print` pozwala na przekazanie kilku argumentów, oddzielonych przecinkami.
+
+### Komentarze
+
+```python
+print("Przykładowy tekst.") # Przykładowa instrukcja
+# print("Inny przykładowy tekst.")
+```
+
+Komentarze nie są brane pod uwagę w trakcie działania programu. Mogą okazać się pomocne przy opisie kodu, czy poszczególnych instrukcji lub tymczasowej zmiany działania programu.
+
+---
 
 ## Zmienna
 
@@ -79,6 +114,8 @@ W języku Python nie możemy zdefiniować zmiennej bez jej inicjalizacji, czyli 
 > W przypadku wartości liczbowych z zakresu (1; 1), możemy pominąć zero wiodące. `0.37` jest równoważne z zapisem `.37`. Adekwatnie dla liczb ujemnych, `-0.37` oznacza to samo, co `-.37`.
 
 > Typ logiczny może przyjmować jedynie dwie wartości `True` - prawdę lub `False` - fałsz.
+
+---
 
 ## Operatory arytmetyczne
 
@@ -136,7 +173,9 @@ Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzedni
 
 > Szczególnym przypadkiem zmiany wartości jest zwiększenie lub zmniejszenie jej o 1. Mowa wtedy odpowednio o **inkrementacji** oraz **dekrementacji**. W większości języków, poza Python, istnieją dla nich oddzielnie operatory.
 
-## Pobieranie wartości od użytkownika
+---
+
+## Komunikacja z użytkownikiem
 
 ```python
 value = input("Wprowadź wartość: ")
@@ -188,7 +227,120 @@ print("Odwrotność danego ułamka to:", fraction ** -1)
 
 Powyższy zapis można skrócić podając pomiędzy nawiasy funkcji `float` wartość podaną przez użytkownika, czyli wywołanie funkcji `input`.
 
-### Polecenia
-1. Napisz program, który pobierze od użytkownika wartość całkowitą i wyświetli jej pierwiastek trzeciego stopnia. Dla ułatwienia zakładamy, że wprowadzona liczba nie będzie ujemna.
-2. Napisz program, który pobierze od użytkownika dwie wartości liczbowe i wyświetli ich średnią arytmetyczną (suma liczb podzielona przez ich ilość.
-3. Napisać program, który pobiera od użytkownika długość promienia pewnego okręgu i wyświetla jego pole powierzchni. Dla ułatwienia zakładamy, że wprowadzony promień nie będzie wartością ujemną
+---
+
+## Polecenia - komunikacja z użytkownikiem
+
+1. Napisać program, który pobiera od użytkownika wartość całkowitą i wyświetla jej pierwiastek trzeciego stopnia.
+2. Napisać program, który pobiera od użytkownika dwie wartości liczbowe i wyświetla ich średnią arytmetyczną (sumę liczb podzieloną przez ich ilość).
+3. Napisać program, który pobiera od użytkownika długość promienia pewnego okręgu i wyświetla jego pole powierzchni. Dla ułatwienia zakładamy, że wprowadzony promień nie będzie wartością ujemną.
+
+---
+
+## Instrukcje warunkowe
+
+**Instrukcje warunkowe** w programowaniu służą do warunkowego wykonywania instrukcji, w zależności od tego, czy dany warunek jest spełniony.
+
+Instrukcja warunkowa jest spełniona, gdy zawarty w niej warunek jest prawdziwy - zwraca wartość logiczną `True`. W przypadku wartości fałszywej - `False`, wskazane instrukcje nie zostaną wykonane.
+
+```python
+condition = True
+
+if condition:
+    print("Warunek jest spełniony")
+```
+
+Po słowie kluczowym `if` następuje **warunek**, linię kończymy znakiem dwukropka, który wyznacza **blok kodu** Wszystkie instrukcje, które mają zostać wykonane w obrębie instrukcji warunkowej (mają zostać wykonane pod warunkiem) posiadają wcięcie. Warunkiem może być zmienna lub całe wyrażenie.
+
+> W powyższym przykładzie sprawdzana jest wartość zmiennej `condition`. Została ona zainicjowana wartością `True` - wartość jest prawdą, co jest równoznaczne ze spełnieniem warunku.
+
+### Operatory relacyjne
+
+Do dyspozycji mamy kilka operatorów służących porównywaniu danych wartości:
+
+|operator|nazwa|
+|-|-|
+|==|równe|
+|!=|różne|
+|>|większe niż|
+|>=|większe lub równe|
+|<|mniejsze niż|
+|<=|mniejsze lub równe|
+
+> Pojedynczy znak równości zarezerwowany jest dla operacji przypisania, więc do porównywania wartości służą dwa znaki.
+
+```python
+age = 18
+
+if age >= 18:
+    print("Osoba jest pełnoletnia")
+```
+
+Operatory relacyjne zwracają określoną wartość logiczną, zatem mogą służyć formułowaniu warunków.
+
+### Warunki złożone
+
+Dane warunki proste, opierające się na przykład na porównaniach, możemy łączyć w bardziej złożone i precyzyjne konstrukcje.
+
+|operator|nazwa|opis|
+|-|-|-|
+|and|koniunkcja|i, oraz - oba warunki muszą być spełnione|
+|or|alternatywa|lub - przynajmniej jeden z warunków musi być spełnony|
+|not|negacja|zaprzeczenie - odwrócenie wartości logicznej|
+
+```python
+x = -2
+
+if x == 2 or x == -2:
+    print("Moduł liczby x wynosi 2.")
+```
+
+Powyższy warunek jest spełniony, gdy dana liczba jest równa *2* lub *-2*
+
+### Konstrukcja instrukcji warunkowej
+
+```python
+number = 2.13
+
+if number > 0:
+    print("Liczba jest dodatnia.")
+
+elif number < 0:
+    print("Liczba jest ujemna.")
+
+else:
+    print("Liczba jest równa 0.")
+```
+
+Po instrukcji `if` można dodawać warunki alternatywne za pośrednictwem instrukcji `elif`. Na samym końcu można dodatkowo zdefiniować działanie dla pozostałych przypadków - czyli sytuacji, w której żaden z poprzednich warunków nie został spełniony.
+
+---
+
+## Switch
+
+W przypadku bardzo precyzyjnych warunków instrukcje warunkowe mogą okazać się niewystarczająco czytelne. Alternatywą może być konstrukcja `switch`, dostępna w języku Python od wersji 3.10.
+
+```python
+term = "b"
+
+match term:
+
+    case "a":
+        print("Wprowadzono literę 'a'.")
+
+    case "b":
+        print("Wprowadzono literę 'b'.")
+
+    case _:
+        print("Wprowadzono inną wartość.")
+```
+
+Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o przeprowadzonych operacjach. W zależności od jej wartości wybierany jest odpowiedni przypadek - `case`. Na końcu umieszczamy przypadek domyślny - znak `_` ozncza w tym przypadku dowolną inną wartość.
+
+---
+
+## Polecenia - instrukcje warunkowe
+
+1. Napisać program, który pobiera od użytkownika jego wiek (wartość całkowita) i wyświetla informację o jego pełnoletniości.
+2. Napisać program, który pobiera wartość całkowitą i wyświetla informację, w zależności czy podana liczba jest parzysta.
+3. Napisać kalkulator prosty z wykorzystaniem instrukcji `switch`. Użytkownik podaje dwie liczby "rzeczywiste" oraz znak (`+`, `-`, `*` lub `/`), który decyduje od przeprowadzonym działaniu, wyświetlany jest wynik.
