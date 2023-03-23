@@ -3,26 +3,25 @@
 
 ## Spis treści
 
-1. [Spis treści](#spis-treści)
-    - [Wprowadzenie](#wprowadzenie)
+1. [Wprowadzenie](#wprowadzenie)
     - [Podstawowy program](#podstawowy-program)
     - [Wyświetlanie tekstu](#wyświetlanie-tekstu)
     - [Komentarze](#komentarze)
-2. [Zmienna](#zmienna)
+1. [Zmienna](#zmienna)
     - [Nazwy zmiennych](#nazwy-zmiennych)
     - [Typy danych](#typy-danych)
     - [Definicja zmiennej](#definicja-zmiennej)
-3. [Operatory arytmetyczne](#operatory-arytmetyczne)
+2. [Operatory arytmetyczne](#operatory-arytmetyczne)
     - [Dodatkowe operatory przypisania](#dodatkowe-operatory-przypisania)
-4. [Komunikacja z użytkownikiem](#komunikacja-z-użytkownikiem)
+3. [Komunikacja z użytkownikiem](#komunikacja-z-użytkownikiem)
     - [Konwersje typów](#konwersje-typów)
-5. [Polecenia - komunikacja z użytkownikiem](#polecenia---komunikacja-z-użytkownikiem)
-6. [Instrukcje warunkowe](#instrukcje-warunkowe)
+4. [Polecenia - komunikacja z użytkownikiem](#polecenia---komunikacja-z-użytkownikiem)
+5. [Instrukcje warunkowe](#instrukcje-warunkowe)
     - [Operatory relacyjne](#operatory-relacyjne)
     - [Warunki złożone](#warunki-złożone)
     - [Konstrukcja instrukcji warunkowej](#konstrukcja-instrukcji-warunkowej)
-7. [Switch](#switch)
-8. [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
+6. [Switch](#switch)
+7. [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
 
 ## Wprowadzenie
 
