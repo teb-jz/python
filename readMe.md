@@ -22,6 +22,11 @@
     - [Konstrukcja instrukcji warunkowej](#konstrukcja-instrukcji-warunkowej)
 6. [Switch](#switch)
 7. [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
+8. [Pętle](#pętle)
+    - [Pętla while](#pętla-while)
+    - [Pętla for](#pętla-for)
+    - [Instrukcja break](#instrukcja-break)
+    - [Polecenia - pętle](#polecenia---pętle)
 
 ## Wprowadzenie
 
@@ -343,3 +348,86 @@ Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o
 1. Napisać program, który pobiera od użytkownika jego wiek (wartość całkowita) i wyświetla informację o jego pełnoletniości.
 2. Napisać program, który pobiera wartość całkowitą i wyświetla informację, w zależności czy podana liczba jest parzysta.
 3. Napisać kalkulator prosty z wykorzystaniem instrukcji `switch`. Użytkownik podaje dwie liczby "rzeczywiste" oraz znak (`+`, `-`, `*` lub `/`), który decyduje od przeprowadzonym działaniu, wyświetlany jest wynik.
+
+## Pętle
+
+Pętle w programowaniu służą do cyklicznego wykonywania ciągu instrukcji określoną liczbę razy.
+
+> Każdy obrót pętli nazywamy **iteracją**.
+
+W języku Python możemy wyróżnić dwa podstawowe typy pętli.
+
+### Pętla while
+
+Pętla wykonuje blok instrukcji dopóki podany warunek, podany po słowie kluczowym `while`, jest spełniony (ma wartość prawdziwą - `True`).
+
+Warunek pętli konstruujemy tak samo, jak warunki w instrukcjach warunkowych `if`. Możemy korzystać z operatorów **relacyjnych** i **logicznych**.
+
+```python
+number = 5
+
+while number > 0:
+
+    print("Wartość: ", number)
+    number -= 1
+```
+
+Na powyższym przykładzie pętla wykonywana jest dopóki wartość zmiennej liczbowej `number` jest dodatnia. Zmienna posiada wartość przypisaną przed wywołaniem pętli. Wewnątrz pętli wartość jest zmieniana (w tym przypadku następuje `dekrementacja`).
+
+### Pętla for
+
+Pętli `for` używa się do **iterowania** po **sekwencjach**.
+
+> **Sekwencyjne typy danych** służą do przechowywania wielu wartości jednocześnie. Przykładami są **listy** i ciągi znaków.
+
+```python
+text = "Ala ma kota"
+
+print("Kolejne znaki:")
+
+for character in text:
+
+    print(character)
+```
+
+Po słowie kluczowym `for` należy zadeklarować zmienną, która w poszczególnych iteracjach pętli będzie przyjmowała kolejne wartości z sekwencji. W powyższym przykładzie są to pojedyncze znaki z przykładowego napisu.
+
+```python
+someRange = range(10)
+
+for number in someRange:
+
+    print(number)
+```
+
+Funkcja `range` zwraca sekwencję liczb (zakres), którą możemy posłużyć się w pętli `for`. Pomiędzy nawiasami, jako argument, podajemy koniec interesującego nas przedziału.
+
+```python
+someRange = range(10)
+
+for number in someRange:
+
+    if 3 < number and number <= 6:
+        print(number)
+```
+
+### Instrukcja Break
+
+Instrukcja `break` odpowiada za natychmiastowe przerwanie pętli, niezależnie od stanu warunku lub iteratora.
+
+```python
+someRange = range(10)
+
+for number in someRange:
+
+    if number == 7:
+        break
+
+    print(number)
+```
+
+## Polecenia - pętle
+
+1. Napisać program zawierający pętlę **while**, która wyświetla liczby z zakresu *od -10 do 15*.
+2. Napisać program zawierający pętlę **for**, która wyświetla liczby *nieparzyste* z zakresu *od 0 do 40*.
+3. Napisać program zawierający pętlę **for**, który wyświetli *5 pierwszych znaków* napisu *"Ala ma kota"*.
