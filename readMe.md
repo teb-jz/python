@@ -15,18 +15,21 @@
     - [Dodatkowe operatory przypisania](#dodatkowe-operatory-przypisania)
 3. [Komunikacja z użytkownikiem](#komunikacja-z-użytkownikiem)
     - [Konwersje typów](#konwersje-typów)
-4. [Polecenia - komunikacja z użytkownikiem](#polecenia---komunikacja-z-użytkownikiem)
-5. [Instrukcje warunkowe](#instrukcje-warunkowe)
+    - [Polecenia - komunikacja z użytkownikiem](#polecenia---komunikacja-z-użytkownikiem)
+4. [Instrukcje warunkowe](#instrukcje-warunkowe)
     - [Operatory relacyjne](#operatory-relacyjne)
     - [Warunki złożone](#warunki-złożone)
     - [Konstrukcja instrukcji warunkowej](#konstrukcja-instrukcji-warunkowej)
-6. [Switch](#switch)
-7. [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
-8. [Pętle](#pętle)
+    - [Switch](#switch)
+    - [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
+6. [Pętle](#pętle)
     - [Pętla while](#pętla-while)
     - [Pętla for](#pętla-for)
     - [Instrukcja break](#instrukcja-break)
     - [Polecenia - pętle](#polecenia---pętle)
+7. [Funkcje](#funkcje)
+    - [Zwracanie wartości](#zwracanie-wartości)
+    - [Polecenia - funkcje](#polecenia---funkcje)
 
 ## Wprowadzenie
 
@@ -160,13 +163,13 @@ number = number + 2
 ```
 
 Przykładowo, liczbę możemy nadpisać wartością o 2 większą, przypisując jej nową wartość w postaci sumy jej starej wartości i liczby 2. Taki zapis można skrócić przy pomocy danych operatorów:
-- +=,
-- -=,
-- *=,
-- **=
-- /=,
-- //=
-- %=.
+- `+=`,
+- `-=`,
+- `*=`,
+- `**=`,
+- `/=`,
+- `//=`,
+- `%=`.
 
 ```python
 number = 5
@@ -233,7 +236,7 @@ Powyższy zapis można skrócić podając pomiędzy nawiasy funkcji `float` wart
 
 ---
 
-## Polecenia - komunikacja z użytkownikiem
+### Polecenia - komunikacja z użytkownikiem
 
 1. Napisać program, który pobiera od użytkownika wartość całkowitą i wyświetla jej pierwiastek trzeciego stopnia.
 2. Napisać program, który pobiera od użytkownika dwie wartości liczbowe i wyświetla ich średnią arytmetyczną (sumę liczb podzieloną przez ich ilość).
@@ -264,12 +267,12 @@ Do dyspozycji mamy kilka operatorów służących porównywaniu danych wartości
 
 |operator|nazwa|
 |-|-|
-|==|równe|
-|!=|różne|
-|>|większe niż|
-|>=|większe lub równe|
-|<|mniejsze niż|
-|<=|mniejsze lub równe|
+|`==`|równe|
+|`!=`|różne|
+|`>`|większe niż|
+|`>=`|większe lub równe|
+|`<`|mniejsze niż|
+|`<=`|mniejsze lub równe|
 
 > Pojedynczy znak równości zarezerwowany jest dla operacji przypisania, więc do porównywania wartości służą dwa znaki.
 
@@ -288,9 +291,9 @@ Dane warunki proste, opierające się na przykład na porównaniach, możemy ł�
 
 |operator|nazwa|opis|
 |-|-|-|
-|and|koniunkcja|i, oraz - oba warunki muszą być spełnione|
-|or|alternatywa|lub - przynajmniej jeden z warunków musi być spełnony|
-|not|negacja|zaprzeczenie - odwrócenie wartości logicznej|
+|`and`|koniunkcja|i, oraz - oba warunki muszą być spełnione|
+|`or`|alternatywa|lub - przynajmniej jeden z warunków musi być spełnony|
+|`not`|negacja|zaprzeczenie - odwrócenie wartości logicznej|
 
 ```python
 x = -2
@@ -343,7 +346,7 @@ Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o
 
 ---
 
-## Polecenia - instrukcje warunkowe
+### Polecenia - instrukcje warunkowe
 
 1. Napisać program, który pobiera od użytkownika jego wiek (wartość całkowita) i wyświetla informację o jego pełnoletniości.
 2. Napisać program, który pobiera wartość całkowitą i wyświetla informację, w zależności czy podana liczba jest parzysta.
@@ -426,8 +429,93 @@ for number in someRange:
     print(number)
 ```
 
-## Polecenia - pętle
+### Polecenia - pętle
 
 1. Napisać program zawierający pętlę **while**, która wyświetla liczby z zakresu *od -10 do 15*.
 2. Napisać program zawierający pętlę **for**, która wyświetla liczby *nieparzyste* z zakresu *od 0 do 40*.
 3. Napisać program zawierający pętlę **for**, który wyświetli *5 pierwszych znaków* napisu *"Ala ma kota"*.
+
+## Funkcje
+
+**Funkcja** to wydzielony fragment kodu, który można używać wielokrotnie w różnych miejscach programu.
+
+Do tej pory korzystaliśmy z **funkcji wbudowanych**, na przykład `print` i `input`, ale jesteśmy w stanie definiować również własne funkcje.
+
+---
+
+```python
+def showMessage ():
+    print("Przykładowa wiadomość")
+```
+
+Po słowie kluczowym `def`, podobnie jak w przypadku zmiennej, musimy podać nazwę symboliczną. Po niej znajduje się nawias okrągły, w którym można określać **parametry** przyjmowane przez tę funkcję.
+
+```python
+showMessage()
+```
+
+Napisanie **definicjii funkcji** nie jest wystarczające, by zawarte w niej instrukcje zostały wykonane. Funkcję wywołujemy w odpowiednim miejscu, odwołując się do jej nazwy symbolicznej.
+
+```python
+def showSum (a, b):
+    print(a + b)
+
+showSum(2, 1)
+```
+
+Jeżeli funkcja przyjmuje parametry, należy je przekazać podczas wywołania. Mowa wtedy o **argumentach**.
+
+> Parametr to zmienna tworzona w obrębie funkcji. Wartości przekazywane przy wywołaniu funkcji nazywamy argumentami.
+
+```python
+def showSum (a, b):
+    print(a + b)
+
+x = 3
+y = 7
+
+showSum(x, y)
+```
+
+Jako parametry funkcji przekazywane są zazwyczaj zmienne o określonych wcześniej wartościach.
+
+> Argumenty funkcji widoczne są jedynie wewnątrz jej bloku. Oznacza to, że mają **zakres lokalny** i można się do nich odwoływać jedynie w obrębie funkcji.
+
+### Zwracanie wartości
+
+Fukcje poza wykonywaniem określonych instrukcji po wywołaniu mają również możliwość zwracania wartości poprzez słowo kluczowe `return`.
+
+```python
+def sum (a, b):
+    return a + b
+
+x = 3
+y = 7
+
+s = sum(x, y)
+print(s)
+```
+
+By wykorzystać zwróconą wartość można ją na przykład przypisać do zmiennej.
+
+```python
+def sum (a, b):
+
+    s = a + b
+    return s
+
+x = int(input('Podaj x: '))
+y = int(input('Podaj y: '))
+
+print(sum(x, y))
+```
+
+Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń, a zwracaną wartość można wykorzystać bezpośrednio w danym wyrażeniu, bez konieczności przypisywania jej wcześniej do zmiennej.
+
+### Polecenia - funkcje
+
+- Napisać funkcję wyświetlającą liczby nieparzyste z zakresu [-15; 15).
+- Napisać funkcję przyjmującą dwa argumenty liczbowe podstawę oraz wykładnik, i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
+- Napisać funkcję przyjmującą jeden argument będący prawym końcem przedziału domkniętego. Funkcja ma za zadanie wyświetlić wszystkie wartości z tego zakresu, które nie dzielą się przez 3 (lewym końcem przedziału ma być zero - zatem przekazany parametr ma być liczbą naturalną).
+
+W przypadku dwóch ostatnich funkcji przekazanymi parametrami mają być wartości pobrane od użytkownika.
