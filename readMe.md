@@ -454,7 +454,7 @@ Po słowie kluczowym `def`, podobnie jak w przypadku zmiennej, musimy podać naz
 showMessage()
 ```
 
-Napisanie **definicjii funkcji** nie jest wystarczające, by zawarte w niej instrukcje zostały wykonane. Funkcję wywołujemy w odpowiednim miejscu, odwołując się do jej nazwy symbolicznej.
+Napisanie **definicji funkcji** nie jest wystarczające, by zawarte w niej instrukcje zostały wykonane. Funkcję wywołujemy w odpowiednim miejscu, odwołując się do jej nazwy symbolicznej.
 
 ```python
 def showSum (a, b):
@@ -515,7 +515,7 @@ Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń
 ### Polecenia - funkcje
 
 - Napisać funkcję wyświetlającą liczby nieparzyste z zakresu [-15; 15).
-- Napisać funkcję przyjmującą dwa argumenty liczbowe podstawę oraz wykładnik, i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
+- Napisać funkcję przyjmującą dwa argumenty liczbowe (podstawę oraz wykładnik) i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
 - Napisać funkcję przyjmującą jeden argument będący prawym końcem przedziału domkniętego. Funkcja ma za zadanie wyświetlić wszystkie wartości z tego zakresu, które nie dzielą się przez 3 (lewym końcem przedziału ma być zero - zatem przekazany parametr ma być liczbą naturalną).
 
 W przypadku dwóch ostatnich funkcji przekazanymi parametrami mają być wartości pobrane od użytkownika.
