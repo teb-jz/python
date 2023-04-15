@@ -58,9 +58,9 @@ print("Inny", "przykładowy", "tekst")
 print('To również napis')
 ```
 
-Język Python pozwala na dwa główne sposoby deklarowania napisów. Do tworzenia ciągów znaków można wykorzystać *apostrofy* lub *cudzysłowy*. W większości języków apostrof zarezerwowany jest dla pojedynczych znaków.
+Język Python pozwala na dwa główne sposoby deklarowania napisów. Do tworzenia ciągów znaków można wykorzystać **apostrofy** lub **cudzysłowy**. W większości języków apostrof zarezerwowany jest dla pojedynczych znaków.
 
-*Łańcuchy znaków* można poddać **konkatenacji**, czyli ich łączeniu, sklejaniu ze sobą. W tym celu wykorzystuje się dwuargumentowy operator `+`. Wynikiem jest nowy ciąg znaków.
+**Łańcuchy znaków** można poddać **konkatenacji**, czyli ich łączeniu, sklejaniu ze sobą. W tym celu wykorzystuje się dwuargumentowy operator `+`. Wynikiem jest nowy ciąg znaków.
 
 Funkcja `print` pozwala na przekazanie kilku argumentów, oddzielonych przecinkami.
 
@@ -101,11 +101,11 @@ W przypadku nazw wieloczłonowych możemy posłużyć się jedną z popularnych 
 ## Typy danych
 
 Python cechuje **typowanie dynamiczne**, oznacza to, że nie musimy jawnie wskazywać typu danej zmiennej. Jest on nadawany automatycznie w zależności od przechowywanej przez nią wartości. Podstawowe typy wbudowane oferowane przez język to:
-- **str** (string) - ciąg/łańcuch znaków, napis,
+- `str` (string) - ciąg/łańcuch znaków, napis,
 - numeryczne:
-  - **int** (integer) - liczba całkowita,
-  - **float** (floating point number) - liczba zmiennoprzecinkowa, liczba "rzeczywista",
-- **bool** (boolean) - wartość logiczna.
+  - `int` (integer) - liczba całkowita,
+  - `float` (floating point number) - liczba zmiennoprzecinkowa, liczba "rzeczywista",
+- `bool` (boolean) - wartość logiczna.
 
 ```python
 text = "Przykładowy tekst" # str
@@ -167,7 +167,7 @@ number = number + 2
 print(number)
 ```
 
-Przykładowo, liczbę możemy nadpisać wartością o 2 większą, przypisując jej nową wartość w postaci sumy jej starej wartości i liczby 2. Taki zapis można skrócić przy pomocy danych operatorów:
+Przykładowo, liczbę możemy nadpisać wartością o *2* większą, przypisując jej nową wartość w postaci sumy jej starej wartości i liczby *2*. Taki zapis można skrócić przy pomocy danych operatorów:
 - `+=`,
 - `-=`,
 - `*=`,
@@ -183,7 +183,7 @@ number += 2
 print(number)
 ```
 
-Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzednim. W obu wypadkach zwiększamy liczbę o 2.
+Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzednim. W obu wypadkach zwiększamy liczbę o *2*.
 
 > Szczególnym przypadkiem zmiany wartości jest zwiększenie lub zmniejszenie jej o 1. Mowa wtedy odpowednio o **inkrementacji** oraz **dekrementacji**. W większości języków, poza Python, istnieją dla nich oddzielnie operatory.
 
@@ -197,7 +197,7 @@ value = input("Wprowadź wartość: ")
 print("Podana wartość to:", value)
 ```
 
-Za pobieranie wartości wprowadzanych przez użytkownika za pośrednictwem klawiatury odpowiada funkcja `input`. Jako argument możemy podać napis, który wyświetli się w konsoli. Może mieć za zadanie na przykład poinformowanie użytkownika o spodziewanej akcji. Funkcja zwraca wartość wprowadzoną przed kliknięciem przycisku *enter*. Jeżeli chcemy z niej skorzystać na dalszym etapie programu, musimy przypisać ją do zmiennej.
+Za pobieranie wartości wprowadzanych przez użytkownika za pośrednictwem klawiatury odpowiada funkcja `input`. Jako argument możemy podać napis, który wyświetli się w konsoli. Może mieć za zadanie na przykład poinformowanie użytkownika o spodziewanej akcji. Funkcja zwraca wartość wprowadzoną przed kliknięciem przycisku enter. Jeżeli chcemy z niej skorzystać na dalszym etapie programu, musimy przypisać ją do zmiennej.
 
 ```python
 x = input("Wprowadź pierwszą liczbę: ")
@@ -208,7 +208,7 @@ print("Suma liczb wynosi:", x + y)
 
 W powyższym przykładzie pomimo próby wprowadzenia liczb, wyświetlony napis nie będzie oczekiwanym wynikiem. W tym przypadku znak `+` nie oznacza dodawania, a **konkatenację**, w związku z tym zmienne zawierają ciągi znaków, a nie liczby.
 
-Znak `"7"`, a liczba `7` to dla danego języka programowania dwie różne wartości. Znaki pomimo, że są cyframi nie zachowują się jak liczby i nie jesteśmy w stanie swobodnie przeprowadzać na nich operacji arytmetycznych.
+Znak *"7"*, a liczba *7* to dla danego języka programowania dwie różne wartości. Znaki pomimo, że są cyframi nie zachowują się jak liczby i nie jesteśmy w stanie swobodnie przeprowadzać na nich operacji arytmetycznych.
 
 ## Konwersje typów
 
@@ -519,7 +519,7 @@ Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń
 
 ## Polecenia - funkcje
 
-- Napisać funkcję wyświetlającą liczby nieparzyste z zakresu [-15; 15).
+- Napisać funkcję wyświetlającą liczby nieparzyste z zakresu *[-15; 15)*.
 - Napisać funkcję przyjmującą dwa argumenty liczbowe (podstawę oraz wykładnik), i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
 - Napisać funkcję przyjmującą jeden argument będący prawym końcem przedziału domkniętego. Funkcja ma za zadanie wyświetlić wszystkie wartości z tego zakresu, które nie dzielą się przez 3 (lewym końcem przedziału ma być zero - zatem przekazany parametr ma być liczbą naturalną).
 
