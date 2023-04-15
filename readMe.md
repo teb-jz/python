@@ -1,44 +1,44 @@
-
-# Python
-
-## Spis treści
+# Spis treści
 
 1. [Wprowadzenie](#wprowadzenie)
     - [Podstawowy program](#podstawowy-program)
     - [Wyświetlanie tekstu](#wyświetlanie-tekstu)
     - [Komentarze](#komentarze)
-1. [Zmienna](#zmienna)
+2. [Zmienna](#zmienna)
     - [Nazwy zmiennych](#nazwy-zmiennych)
     - [Typy danych](#typy-danych)
     - [Definicja zmiennej](#definicja-zmiennej)
-2. [Operatory arytmetyczne](#operatory-arytmetyczne)
+3. [Operatory arytmetyczne](#operatory-arytmetyczne)
     - [Dodatkowe operatory przypisania](#dodatkowe-operatory-przypisania)
-3. [Komunikacja z użytkownikiem](#komunikacja-z-użytkownikiem)
+4. [Komunikacja z użytkownikiem](#komunikacja-z-użytkownikiem)
     - [Konwersje typów](#konwersje-typów)
-    - [Polecenia - komunikacja z użytkownikiem](#polecenia---komunikacja-z-użytkownikiem)
-4. [Instrukcje warunkowe](#instrukcje-warunkowe)
+    - [Polecenia](#polecenia---komunikacja-z-użytkownikiem)
+5. [Instrukcje warunkowe](#instrukcje-warunkowe)
     - [Operatory relacyjne](#operatory-relacyjne)
     - [Warunki złożone](#warunki-złożone)
     - [Konstrukcja instrukcji warunkowej](#konstrukcja-instrukcji-warunkowej)
     - [Switch](#switch)
-    - [Polecenia - instrukcje warunkowe](#polecenia---instrukcje-warunkowe)
+    - [Polecenia](#polecenia---instrukcje-warunkowe)
 6. [Pętle](#pętle)
     - [Pętla while](#pętla-while)
     - [Pętla for](#pętla-for)
     - [Instrukcja break](#instrukcja-break)
-    - [Polecenia - pętle](#polecenia---pętle)
+    - [Polecenia](#polecenia---pętle)
 7. [Funkcje](#funkcje)
     - [Zwracanie wartości](#zwracanie-wartości)
     - [Polecenia - funkcje](#polecenia---funkcje)
 8. [Listy](#listy)
+    - [Indeksowanie](#indeksowanie)
     - [Iterowanie po listach](#iterowanie-po-listach)
-    - [Polecenia - listy](#polecenia---listy)
+    - [Polecenia](#polecenia---listy)
 
-## Wprowadzenie
+&nbsp;
+
+# Wprowadzenie
 
 Python to język programowania wysokiego poziomu, ogólnego przeznaczenia. Jego składnia cechuje się przejrzystością i zwięzłością. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią.
 
-### Podstawowy program
+## Podstawowy program
 
 ```python
 print("Hello world!")
@@ -48,7 +48,7 @@ Powyższy program ma za zadanie wypisać, przy pomocy *funkcji* `print`, podany 
 
 > Kolejną istotną różnią jest brak średników kończących daną instrukcję.
 
-### Wyświetlanie tekstu
+## Wyświetlanie tekstu
 
 Najprostszym sposobem na komunikację z użytkownikiem jest konsola, która pomocna może okazać się również w celu prześledzenia pracy programu na różnych jego etapach.
 
@@ -64,7 +64,7 @@ Język Python pozwala na dwa główne sposoby deklarowania napisów. Do tworzeni
 
 Funkcja `print` pozwala na przekazanie kilku argumentów, oddzielonych przecinkami.
 
-### Komentarze
+## Komentarze
 
 ```python
 print("Przykładowy tekst.") # Przykładowa instrukcja
@@ -73,13 +73,13 @@ print("Przykładowy tekst.") # Przykładowa instrukcja
 
 Komentarze nie są brane pod uwagę w trakcie działania programu. Mogą okazać się pomocne przy opisie kodu, czy poszczególnych instrukcji lub tymczasowej zmiany działania programu.
 
----
+&nbsp;
 
-## Zmienna
+# Zmienna
 
 **Zmienna** to pewne wydzielone miejsce w pamięci komputera, gdzie mogą być przechowywane dane, między innymi wyniki wykonywanych operacji. Wartością zmiennej może być na przykład liczba lub ciąg znaków. Zmienna musi posiadać nazwę symboliczną, przez którą można odwoływać się do niej w programie.
 
-### Nazwy zmiennych
+## Nazwy zmiennych
 
 Nazwa może być dowolna, ale musi spełniać następujące warunki:
 
@@ -98,7 +98,7 @@ W przypadku nazw wieloczłonowych możemy posłużyć się jedną z popularnych 
 - **snake_case** - wyrazy oddzielamy znakiem myślnika,
 - **kebab-case** - wyrazy oddzielamy znakiem myślnika.
 
-### Typy danych
+## Typy danych
 
 Python cechuje **typowanie dynamiczne**, oznacza to, że nie musimy jawnie wskazywać typu danej zmiennej. Jest on nadawany automatycznie w zależności od przechowywanej przez nią wartości. Podstawowe typy wbudowane oferowane przez język to:
 - **str** (string) - ciąg/łańcuch znaków, napis,
@@ -115,7 +115,7 @@ anotherFraction = .37 # float
 statement = True # bool
 ```
 
-### Definicja zmiennej
+## Definicja zmiennej
 
 W języku Python nie możemy zdefiniować zmiennej bez jej inicjalizacji, czyli przypisania wartości początkowej. Na początek odwołujemy się do nazwy symbolicznej, operatorem przypisania jest `=`, po którym następuje podanie wartości.
 
@@ -125,9 +125,9 @@ W języku Python nie możemy zdefiniować zmiennej bez jej inicjalizacji, czyli 
 
 > Typ logiczny może przyjmować jedynie dwie wartości `True` - prawdę lub `False` - fałsz.
 
----
+&nbsp;
 
-## Operatory arytmetyczne
+# Operatory arytmetyczne
 
 Podobnie jak inne języki, Python oferuje kilka podstawowych operatorów arytmetycznych, znanych z matematyki:
 - `+` - dodawanie,
@@ -156,13 +156,15 @@ print("Ta sama suma:", a + b)
 
 Powyższy przykład przedstawia dodawanie dwóch liczb. Na początku definiujemy dwie zmienne i inicjalizujemy je ustalonymi wartościami całkowitymi. W celu wyświetlenia sumy (wyniku dodawania) możemy zadeklarować kolejną zmienną, ale możemy również wykonać operację bezpośrednio w nawiasach funkcji `print`.
 
-### Dodatkowe operatory przypisania
+## Dodatkowe operatory przypisania
 
 Często będziemy musieli zmieniać wartość danej zmiennej, nadpisując ją inną wartością.
 
 ```python
 number = 5
 number = number + 2
+
+print(number)
 ```
 
 Przykładowo, liczbę możemy nadpisać wartością o 2 większą, przypisując jej nową wartość w postaci sumy jej starej wartości i liczby 2. Taki zapis można skrócić przy pomocy danych operatorów:
@@ -177,15 +179,17 @@ Przykładowo, liczbę możemy nadpisać wartością o 2 większą, przypisując 
 ```python
 number = 5
 number += 2
+
+print(number)
 ```
 
 Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzednim. W obu wypadkach zwiększamy liczbę o 2.
 
 > Szczególnym przypadkiem zmiany wartości jest zwiększenie lub zmniejszenie jej o 1. Mowa wtedy odpowednio o **inkrementacji** oraz **dekrementacji**. W większości języków, poza Python, istnieją dla nich oddzielnie operatory.
 
----
+&nbsp;
 
-## Komunikacja z użytkownikiem
+# Komunikacja z użytkownikiem
 
 ```python
 value = input("Wprowadź wartość: ")
@@ -206,7 +210,7 @@ W powyższym przykładzie pomimo próby wprowadzenia liczb, wyświetlony napis n
 
 Znak `"7"`, a liczba `7` to dla danego języka programowania dwie różne wartości. Znaki pomimo, że są cyframi nie zachowują się jak liczby i nie jesteśmy w stanie swobodnie przeprowadzać na nich operacji arytmetycznych.
 
-### Konwersje typów
+## Konwersje typów
 
 Aby dane wprowadzone przez użytkownika zostały poprawnie zinterpretowane należy je najpierw przekonwertować. W tym celu posłużą nam funkcje wbudowane:
 
@@ -237,17 +241,15 @@ print("Odwrotność danego ułamka to:", fraction ** -1)
 
 Powyższy zapis można skrócić podając pomiędzy nawiasy funkcji `float` wartość podaną przez użytkownika, czyli wywołanie funkcji `input`.
 
----
-
-### Polecenia - komunikacja z użytkownikiem
+## Polecenia - komunikacja z użytkownikiem
 
 1. Napisać program, który pobiera od użytkownika wartość całkowitą i wyświetla jej pierwiastek trzeciego stopnia.
 2. Napisać program, który pobiera od użytkownika dwie wartości liczbowe i wyświetla ich średnią arytmetyczną (sumę liczb podzieloną przez ich ilość).
 3. Napisać program, który pobiera od użytkownika długość promienia pewnego okręgu i wyświetla jego pole powierzchni. Dla ułatwienia zakładamy, że wprowadzony promień nie będzie wartością ujemną.
 
----
+&nbsp;
 
-## Instrukcje warunkowe
+# Instrukcje warunkowe
 
 **Instrukcje warunkowe** w programowaniu służą do warunkowego wykonywania instrukcji, w zależności od tego, czy dany warunek jest spełniony.
 
@@ -264,7 +266,7 @@ Po słowie kluczowym `if` następuje **warunek**, linię kończymy znakiem dwukr
 
 > W powyższym przykładzie sprawdzana jest wartość zmiennej `condition`. Została ona zainicjowana wartością `True` - wartość jest prawdą, co jest równoznaczne ze spełnieniem warunku.
 
-### Operatory relacyjne
+## Operatory relacyjne
 
 Do dyspozycji mamy kilka operatorów służących porównywaniu danych wartości:
 
@@ -288,7 +290,7 @@ if age >= 18:
 
 Operatory relacyjne zwracają określoną wartość logiczną, zatem mogą służyć formułowaniu warunków.
 
-### Warunki złożone
+## Warunki złożone
 
 Dane warunki proste, opierające się na przykład na porównaniach, możemy łączyć w bardziej złożone i precyzyjne konstrukcje.
 
@@ -307,7 +309,7 @@ if x == 2 or x == -2:
 
 Powyższy warunek jest spełniony, gdy dana liczba jest równa *2* lub *-2*
 
-### Konstrukcja instrukcji warunkowej
+## Konstrukcja instrukcji warunkowej
 
 ```python
 number = 2.13
@@ -324,11 +326,11 @@ else:
 
 Po instrukcji `if` można dodawać warunki alternatywne za pośrednictwem instrukcji `elif`. Na samym końcu można dodatkowo zdefiniować działanie dla pozostałych przypadków - czyli sytuacji, w której żaden z poprzednich warunków nie został spełniony.
 
----
+&nbsp;
 
-## Switch
+# Switch
 
-W przypadku bardzo precyzyjnych warunków instrukcje warunkowe mogą okazać się niewystarczająco czytelne. Alternatywą może być konstrukcja `switch`, dostępna w języku Python od wersji 3.10.
+W przypadku bardzo precyzyjnych warunków instrukcje warunkowe mogą okazać się niewystarczająco czytelne. Alternatywą może być konstrukcja `switch`, dostępna w języku Python od wersji *3.10*.
 
 ```python
 term = "b"
@@ -347,15 +349,15 @@ match term:
 
 Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o przeprowadzonych operacjach. W zależności od jej wartości wybierany jest odpowiedni przypadek - `case`. Na końcu umieszczamy przypadek domyślny - znak `_` ozncza w tym przypadku dowolną inną wartość.
 
----
-
-### Polecenia - instrukcje warunkowe
+## Polecenia - instrukcje warunkowe
 
 1. Napisać program, który pobiera od użytkownika jego wiek (wartość całkowita) i wyświetla informację o jego pełnoletniości.
 2. Napisać program, który pobiera wartość całkowitą i wyświetla informację, w zależności czy podana liczba jest parzysta.
 3. Napisać kalkulator prosty z wykorzystaniem instrukcji `switch`. Użytkownik podaje dwie liczby "rzeczywiste" oraz znak (`+`, `-`, `*` lub `/`), który decyduje od przeprowadzonym działaniu, wyświetlany jest wynik.
 
-## Pętle
+&nbsp;
+
+# Pętle
 
 Pętle w programowaniu służą do cyklicznego wykonywania ciągu instrukcji określoną liczbę razy.
 
@@ -363,7 +365,7 @@ Pętle w programowaniu służą do cyklicznego wykonywania ciągu instrukcji okr
 
 W języku Python możemy wyróżnić dwa podstawowe typy pętli.
 
-### Pętla while
+## Pętla while
 
 Pętla wykonuje blok instrukcji dopóki podany warunek, podany po słowie kluczowym `while`, jest spełniony (ma wartość prawdziwą - `True`).
 
@@ -380,7 +382,7 @@ while number > 0:
 
 Na powyższym przykładzie pętla wykonywana jest dopóki wartość zmiennej liczbowej `number` jest dodatnia. Zmienna posiada wartość przypisaną przed wywołaniem pętli. Wewnątrz pętli wartość jest zmieniana (w tym przypadku następuje `dekrementacja`).
 
-### Pętla for
+## Pętla for
 
 Pętli `for` używa się do **iterowania** po **sekwencjach**.
 
@@ -417,7 +419,7 @@ for number in someRange:
         print(number)
 ```
 
-### Instrukcja Break
+## Instrukcja Break
 
 Instrukcja `break` odpowiada za natychmiastowe przerwanie pętli, niezależnie od stanu warunku lub iteratora.
 
@@ -432,19 +434,19 @@ for number in someRange:
     print(number)
 ```
 
-### Polecenia - pętle
+## Polecenia - pętle
 
 1. Napisać program zawierający pętlę **while**, która wyświetla liczby z zakresu *od -10 do 15*.
 2. Napisać program zawierający pętlę **for**, która wyświetla liczby *nieparzyste* z zakresu *od 0 do 40*.
 3. Napisać program zawierający pętlę **for**, który wyświetli *5 pierwszych znaków* napisu *"Ala ma kota"*.
 
-## Funkcje
+&nbsp;
+
+# Funkcje
 
 **Funkcja** to wydzielony fragment kodu, który można używać wielokrotnie w różnych miejscach programu.
 
 Do tej pory korzystaliśmy z **funkcji wbudowanych**, na przykład `print` i `input`, ale jesteśmy w stanie definiować również własne funkcje.
-
----
 
 ```python
 def showMessage ():
@@ -484,7 +486,7 @@ Jako parametry funkcji przekazywane są zazwyczaj zmienne o określonych wcześn
 
 > Argumenty funkcji widoczne są jedynie wewnątrz jej bloku. Oznacza to, że mają **zakres lokalny** i można się do nich odwoływać jedynie w obrębie funkcji.
 
-### Zwracanie wartości
+## Zwracanie wartości
 
 Fukcje poza wykonywaniem określonych instrukcji po wywołaniu mają również możliwość zwracania wartości poprzez słowo kluczowe `return`.
 
@@ -515,7 +517,7 @@ print(sum(x, y))
 
 Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń, a zwracaną wartość można wykorzystać bezpośrednio w danym wyrażeniu, bez konieczności przypisywania jej wcześniej do zmiennej.
 
-### Polecenia - funkcje
+## Polecenia - funkcje
 
 - Napisać funkcję wyświetlającą liczby nieparzyste z zakresu [-15; 15).
 - Napisać funkcję przyjmującą dwa argumenty liczbowe (podstawę oraz wykładnik), i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
@@ -523,11 +525,11 @@ Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń
 
 W przypadku dwóch ostatnich funkcji przekazanymi parametrami mają być wartości pobrane od użytkownika.
 
-## Listy
+&nbsp;
+
+# Listy
 
 Jednym z przykładów wspomnianych wcześniej sekwencyjnych typów danych są listy. Można interpretować je jako uporządkowane zbiory pewnych elementów.
-
----
 
 W języku Python listę definiujemy poprzez nawiasy kwadratowe, wewnątrz nich wypisujemy kolejne elementy listy oddzielone przecinkami. Listy, podobnie jak w przypadku innych wartości, możemy przypisać do zmiennej.
 
@@ -543,7 +545,7 @@ idk = ['sample', 8, 'tekst']
 
 Elementami list mogą być typy proste lub inne typy złożone, na przykład kolejne listy.
 
-### Indeksowanie
+## Indeksowanie
 
 Każdy element listy ma przyporządkowaną liczbę - **indeks**, określającą pozycję elementu w liście.
 
@@ -571,8 +573,6 @@ Python umożliwia również wygodne odwoływanie się do elementów zaczynając 
 
 > Przy pobieraniu elementu z listy należy uważać na poprawność podanego indeksu. Nie może on wykraczać poza dostępne indeksy danej listy - nie jesteśmy na przykład w stanie odwołać się do indeksu *11* w liście zawierającej zaledwie *9* elementów.
 
----
-
 ```python
 numbers = [2, 7, 3, 1]
 
@@ -585,7 +585,7 @@ Korzystając z wbudowanej funkcji `len` możemy pobrać długość danej listy.
 
 > W związku z indeksowaniem od zera, kolejne indeksy listy to liczby całkowite od zera do długości listy minus jeden - na przykład dla listy trzyelementowej dostępne indeksy to *0*, *1* oraz *2*.
 
-### Iterowanie po listach
+## Iterowanie po listach
 
 Listy są **sekwencjami**. Oznacza to, że są złożone z wielu uporządkowanych elementów.
 
@@ -630,7 +630,7 @@ while index < length:
 
 Adekwatnie dla pętli while. W tym przypadku nie jesteśmy w stanie iterować bezpośrednio po sekwencji, zatem musimy skorzystać z indeksów.
 
-### Polecenia - listy
+## Polecenia - listy
 
 Mamy daną listę liczb całkowitych: `[-2, 3, 4, -1, 2, 0, 3, -7, 2, 5]`.
 
