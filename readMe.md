@@ -30,6 +30,9 @@
 7. [Funkcje](#funkcje)
     - [Zwracanie wartości](#zwracanie-wartości)
     - [Polecenia - funkcje](#polecenia---funkcje)
+8. [Listy](#listy)
+    - [Iterowanie po listach](#iterowanie-po-listach)
+    - [Polecenia - listy](#polecenia---listy)
 
 ## Wprowadzenie
 
@@ -515,7 +518,122 @@ Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń
 ### Polecenia - funkcje
 
 - Napisać funkcję wyświetlającą liczby nieparzyste z zakresu [-15; 15).
-- Napisać funkcję przyjmującą dwa argumenty liczbowe (podstawę oraz wykładnik) i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
+- Napisać funkcję przyjmującą dwa argumenty liczbowe (podstawę oraz wykładnik), i wyświetlającą na ich podstawie wartość potęgi (parametrami powinny być liczby "rzeczywiste").
 - Napisać funkcję przyjmującą jeden argument będący prawym końcem przedziału domkniętego. Funkcja ma za zadanie wyświetlić wszystkie wartości z tego zakresu, które nie dzielą się przez 3 (lewym końcem przedziału ma być zero - zatem przekazany parametr ma być liczbą naturalną).
 
 W przypadku dwóch ostatnich funkcji przekazanymi parametrami mają być wartości pobrane od użytkownika.
+
+## Listy
+
+Jednym z przykładów wspomnianych wcześniej sekwencyjnych typów danych są listy. Można interpretować je jako uporządkowane zbiory pewnych elementów.
+
+---
+
+W języku Python listę definiujemy poprzez nawiasy kwadratowe, wewnątrz nich wypisujemy kolejne elementy listy oddzielone przecinkami. Listy, podobnie jak w przypadku innych wartości, możemy przypisać do zmiennej.
+
+```python
+numbers = [3, 7, 2, 1]
+letters = ['x', 'd', 'd']
+matrix = [
+    [0, 9],
+    [3, 4]
+]
+idk = ['sample', 8, 'tekst']
+```
+
+Elementami list mogą być typy proste lub inne typy złożone, na przykład kolejne listy.
+
+### Indeksowanie
+
+Każdy element listy ma przyporządkowaną liczbę - **indeks**, określającą pozycję elementu w liście.
+
+> W informatyce przyjęło się indeksować elementy od zera, zatem pierwszy element ma indeks *0*, drugi - *1* i tak dalej.
+
+```python
+numbers = [4, 2, 0]
+
+firstNumber = numbers[0]
+
+print('Pierwsza liczba: ', firstNumber)
+```
+
+Chcąc odwołać się do danego elementu listy, podajemy nazwę symboliczną zmiennej przechowującej listę i nawiasy kwadratowe z konkretnym indeksem.
+
+```python
+letters = ['a', 'b', 'c', 'd', 'e']
+
+print('Druga litera:', letters[1])
+print('Ostatnia litera:', letters[-1])
+print('Przedostatnia litera:', letters[-2])
+```
+
+Python umożliwia również wygodne odwoływanie się do elementów zaczynając od końca listy, poprzez podanie ujemnego indeksu. Tym razem zaczynamy od *-1* i schodzimy w dół.
+
+> Przy pobieraniu elementu z listy należy uważać na poprawność podanego indeksu. Nie może on wykraczać poza dostępne indeksy danej listy - nie jesteśmy na przykład w stanie odwołać się do indeksu *11* w liście zawierającej zaledwie *9* elementów.
+
+---
+
+```python
+numbers = [2, 7, 3, 1]
+
+count = len(numbers)
+
+print('Długość listy:', count)
+```
+
+Korzystając z wbudowanej funkcji `len` możemy pobrać długość danej listy.
+
+> W związku z indeksowaniem od zera, kolejne indeksy listy to liczby całkowite od zera do długości listy minus jeden - na przykład dla listy trzyelementowej dostępne indeksy to *0*, *1* oraz *2*.
+
+### Iterowanie po listach
+
+Listy są **sekwencjami**. Oznacza to, że są złożone z wielu uporządkowanych elementów.
+
+---
+
+Często konieczne będzie operowanie na wszystkich elementach danej listy. Odwołania do konkretnych elementów nie zawsze są wygodne i możliwe do zrealizowania. Ponocne w tym zadaniu są pętle.
+
+```python
+numbers = [7, 3, 2, 5, 4]
+
+for number in numbers:
+    print(number)
+```
+
+W powyższym przykładzie zmienna `number` przyjmuje jako wartość kolejno wszystkie elementy z listy `numbers`.
+
+```python
+numbers = [7, 3, 2, 5, 4]
+
+length = len(numbers)
+
+for index in range(length):
+
+    print("Element o indeksie", index, "wynosi:", numbers[index])
+```
+
+Do poszczególnych elementów możemy odwoływać się również za pośrednictwem indeksów.
+
+W tym celu należy pobrać długość listy za pomocą funkcji `len` i sprecyzować na jej podstawie interesujący nas zakres (od zera do długości listy). Elementami (nieujemne liczby całkowite) tego zakresu są indeksy dostępne dla danej listy.
+
+```python
+numbers = [7, 3, 2, 5, 4]
+
+length = len(numbers)
+index = 0
+
+while index < length:
+
+    print("Element o indeksie", index, "wynosi:", numbers[index])
+    index += 1
+```
+
+Adekwatnie dla pętli while. W tym przypadku nie jesteśmy w stanie iterować bezpośrednio po sekwencji, zatem musimy skorzystać z indeksów.
+
+### Polecenia - listy
+
+Mamy daną listę liczb całkowitych: `[-2, 3, 4, -1, 2, 0, 3, -7, 2, 5]`.
+
+- Przy pomocy pętli `for` wyświetlić z listy jedynie wartości nieujemne.
+- Przy pomocy pętli `while` wyświetlić z listy jedynie wartości parzyste.
+- Przy pomocy pętli `while` wyświetlić z listy co trzeci element.
