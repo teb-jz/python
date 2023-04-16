@@ -26,7 +26,7 @@
     - [Polecenia](#polecenia---pętle)
 7. [Funkcje](#funkcje)
     - [Zwracanie wartości](#zwracanie-wartości)
-    - [Polecenia - funkcje](#polecenia---funkcje)
+    - [Polecenia](#polecenia---funkcje)
 8. [Listy](#listy)
     - [Indeksowanie](#indeksowanie)
     - [Iterowanie po listach](#iterowanie-po-listach)
