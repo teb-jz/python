@@ -31,6 +31,11 @@
     - [Indeksowanie](#indeksowanie)
     - [Iterowanie po listach](#iterowanie-po-listach)
     - [Polecenia](#polecenia---listy)
+9. [Klasy i obiekty](#klasy-i-obiekty)
+    - [Definicja klasy i konstruktor](#definicja-klasy-i-konstruktor)
+    - [Pola](#pola)
+    - [Metody](#metody)
+    - [Polecenia](#polecenia---klasy-i-obiekty)
 
 &nbsp;
 
@@ -637,3 +642,84 @@ Mamy daną listę liczb całkowitych: `[-2, 3, 4, -1, 2, 0, 3, -7, 2, 5]`.
 - Przy pomocy pętli `for` wyświetlić z listy jedynie wartości nieujemne.
 - Przy pomocy pętli `while` wyświetlić z listy jedynie wartości parzyste.
 - Przy pomocy pętli `while` wyświetlić z listy co trzeci element.
+
+# Klasy i obiekty
+
+**Obiekty** to struktury przechowujące pewne dane i posiadające zdefiniowane działanie. Dane, które można interpretować jako zmienne należące do obiektu nazywamy **polami**, a działanie, czyli inaczej funkcje zdefiniowane wewnątrz obiektu - **metodami**.
+
+**Klasy** to byt abstrakcyjny. Są to pewnego rodzaju przepisy na utworzenie obiektów. Obiekt utworzony na podstawie danej klasy nazywamy jego **instancją**.
+
+## Definicja klasy i konstruktor
+
+Obiekty w programowaniu często reprezentują jakiś rzeczywisty byt.
+
+```python
+class Obj:
+
+    def __init__ (self):
+
+        print("Utworzono obiekt!")
+```
+
+Klasę definiujemy poprzez słowo klczowe `class` oraz podanie nazwy symbolicznej zakończonej dwukropkiem. Metodą, która zazwyczaj pojawia się w klasie jest `__init__`. Jest to tak zwany **konstruktor**. Jest on wywoływany, gdy tworzony jest obiekt.
+
+> Wszystkie metody zdefiniowane w klasie przyjmują przynajmniej jeden argument - `self`, jest on wymagany.
+
+Oczywiście sama klasa to jedynie przepis. Należy jeszcze utworzyć na jej podstawie obiekt.
+
+```python
+obj = Obj()
+```
+
+## Pola
+
+Pola deklarujemy podobnie jak zmienne, podając nazwę symboliczną i przypisując do nich jakąś wartość.
+
+```python
+class Circle:
+
+    pi = 3.14
+
+a = Circle()
+
+print(a.pi)
+```
+
+Po utworzeniu obiektu możemy odwołać się do zawartych w nim danych.
+
+> Do składowych obiektów jak pola czy metody odwołujemy się po kropce.
+
+Oczywiście mamy możliwość modyfikowania danych w obiekcie.
+
+```python
+a.pi = 3.141593
+```
+
+## Metody
+
+Podczas tworzenia obiektu możemy przekazać parametry, których wartości można następnie wykorzystać w jego obrębie. Zarządzanie tymi argumentami realizuje konstruktor.
+
+```python
+class Circle:
+
+    pi = 3.14
+
+    def __init__ (self, radius):
+
+        self.r = radius
+
+    def showLength (self):
+
+        print(2 * self.pi * self.r)
+
+a = Circle(2)
+
+a.showLength()
+```
+
+Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`.
+
+## Polecenia - klasy i obiekty
+
+1. Napisz deklarację klasy **Pojazd**, zawierającą przynajmniej trzy tematyczne pola oraz metodę wyświetlającą te dane.
+2. Napisz deklarację klasy **Kwadrat**, umożliwiającą sprecyzowanie długości boku. Ponadto ma zawierać metody wyświetlające pole danego kwadratu oraz całkowitą długość boków.
