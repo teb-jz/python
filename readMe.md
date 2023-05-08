@@ -723,3 +723,31 @@ Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`
 
 1. Napisz deklarację klasy **Pojazd**, zawierającą przynajmniej trzy tematyczne pola oraz metodę wyświetlającą te dane.
 2. Napisz deklarację klasy **Kwadrat**, umożliwiającą sprecyzowanie długości boku. Ponadto ma zawierać metody wyświetlające pole danego kwadratu oraz całkowitą długość boków.
+
+# Idk
+
+```python
+import tkinter
+from tkinter import ttk
+
+root = tkinter.Tk()
+root.geometry("200x200")
+root.title("xdd")
+
+frame = ttk.Frame(root, padding = 10)
+
+label = tkinter.Label(frame, text = "aha41")
+
+label.grid(columnspan = 2, column = 0, row = 0)
+
+tkinter.Button(frame, text = "Button",\
+    command = lambda : label.config(text = 'xpp'))\
+        .grid(column = 0, row = 1)
+
+tkinter.Button(frame, text = "Exit", command = root.destroy)\
+    .grid(column = 1, row = 1)
+
+frame.pack(expand = True)
+
+root.mainloop()
+```
