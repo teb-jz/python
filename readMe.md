@@ -36,6 +36,11 @@
     - [Pola](#pola)
     - [Metody](#metody)
     - [Polecenia](#polecenia---klasy-i-obiekty)
+10. [Aplikacje okienkowe](#aplikacje-okienkowe)
+    - [Importowanie bibliotek](#importowanie-bibliotek)
+    - [Tworzenie okna](#tworzenie-okna)
+    - [Elementy okna](#elementy-okna)
+    - [Polecenia](#polecenia---aplikacje-okienkowe)
 
 &nbsp;
 
@@ -514,8 +519,8 @@ def sum (a, b):
     s = a + b
     return s
 
-x = int(input('Podaj x: '))
-y = int(input('Podaj y: '))
+x = int(input("Podaj x: "))
+y = int(input("Podaj y: "))
 
 print(sum(x, y))
 ```
@@ -545,7 +550,7 @@ matrix = [
     [0, 9],
     [3, 4]
 ]
-idk = ['sample', 8, 'tekst']
+idk = ["sample", 8, "tekst"]
 ```
 
 Elementami list mogą być typy proste lub inne typy złożone, na przykład kolejne listy.
@@ -561,7 +566,7 @@ numbers = [4, 2, 0]
 
 firstNumber = numbers[0]
 
-print('Pierwsza liczba: ', firstNumber)
+print("Pierwsza liczba: ", firstNumber)
 ```
 
 Chcąc odwołać się do danego elementu listy, podajemy nazwę symboliczną zmiennej przechowującej listę i nawiasy kwadratowe z konkretnym indeksem.
@@ -569,9 +574,9 @@ Chcąc odwołać się do danego elementu listy, podajemy nazwę symboliczną zmi
 ```python
 letters = ['a', 'b', 'c', 'd', 'e']
 
-print('Druga litera:', letters[1])
-print('Ostatnia litera:', letters[-1])
-print('Przedostatnia litera:', letters[-2])
+print("Druga litera:", letters[1])
+print("Ostatnia litera:", letters[-1])
+print("Przedostatnia litera:", letters[-2])
 ```
 
 Python umożliwia również wygodne odwoływanie się do elementów zaczynając od końca listy, poprzez podanie ujemnego indeksu. Tym razem zaczynamy od *-1* i schodzimy w dół.
@@ -583,7 +588,7 @@ numbers = [2, 7, 3, 1]
 
 count = len(numbers)
 
-print('Długość listy:', count)
+print("Długość listy:", count)
 ```
 
 Korzystając z wbudowanej funkcji `len` możemy pobrać długość danej listy.
@@ -724,30 +729,153 @@ Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`
 1. Napisz deklarację klasy **Pojazd**, zawierającą przynajmniej trzy tematyczne pola oraz metodę wyświetlającą te dane.
 2. Napisz deklarację klasy **Kwadrat**, umożliwiającą sprecyzowanie długości boku. Ponadto ma zawierać metody wyświetlające pole danego kwadratu oraz całkowitą długość boków.
 
-# Idk
+# Aplikacje okienkowe
+
+Biblioteka *Tkinter*, będąca standardowym interfejsem zestawu narzędzi *Tck/Tk*, odznacza się wieloplatformowością, co pozwala na korzystanie z programu na różnych systemach operacyjnych.
+
+## Importowanie bibliotek
+
+Jeżeli potrzebujemy funkcjonalności spoza biblioteki standardowej możemy posłużyć się zewnętrznymi bibliotekami, jednak należy je najpierw zaimportować.
 
 ```python
-import tkinter
+import tkinter as tk
+```
+
+Rozpoczynamy od słowa kluczowego `import` i podajemy nazwę interesującej nas biblioteki. Opcjonalnie możemy ją skrócić określając alias słowem `as`.
+
+```python
 from tkinter import ttk
+```
 
-root = tkinter.Tk()
-root.geometry("200x200")
-root.title("xdd")
+W przypadku, gdy interesuje nas konkretny element biblioteki możemy go sprecyzować zaczynając od słowa `from`, podać nazwę biblioteki, a na koniec dany element.
 
-frame = ttk.Frame(root, padding = 10)
+> Importowanie potrzebnych bibliotek powinno odbywać się w pierwszej kolejnośći - w pierwszych liniach pliku.
 
-label = tkinter.Label(frame, text = "aha41")
+## Tworzenie okna
 
-label.grid(columnspan = 2, column = 0, row = 0)
+```python
+import tkinter as tk
 
-tkinter.Button(frame, text = "Button",\
-    command = lambda : label.config(text = 'xpp'))\
-        .grid(column = 0, row = 1)
-
-tkinter.Button(frame, text = "Exit", command = root.destroy)\
-    .grid(column = 1, row = 1)
-
-frame.pack(expand = True)
+root = tk.Tk()
 
 root.mainloop()
 ```
+
+Do stworzenia okna korzystamy z obiektu biblioteki *Tkinter*.
+
+```python
+import tkinter as tk
+
+root = tk.Tk()
+
+root.geometry("400x200")
+root.title("Sample title")
+
+root.mainloop()
+```
+
+Do dyspozycji mamy metody, pozwalające na dostosowywanie okna. Między innymi jego wymiary oraz tytuł.
+
+## Elementy okna
+
+### Etykiety
+
+Aby wstawić prosty tekst można skorzystać z klasy `Label`.
+
+```python
+import tkinter as tk
+
+root = tk.Tk()
+
+root.geometry("200x100")
+root.title("Sample title")
+
+label = tk.Label(root, text = "Sample text")
+
+label.pack()
+
+root.mainloop()
+```
+
+Tworząc obiekt podajemy element nadrzędny oraz dodatkowe opcje, takie jak `text`.
+
+Do umieszczenie elementu w oknie możemy skorzystać z metody `pack`.
+
+```python
+label.pack(side = "left")
+```
+
+Poprzez podanie odpowiednich parametrów można dodatkowo zarządzać sposobem wyświetlania elementu.
+
+### Przyciski
+
+W przypadku przycisków postępujemy adekwatnie, tym razem wykorzystując klasę `Button`.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("Sample title")
+
+button = tkinter.Button(root, text = "Button")
+
+button.pack()
+
+root.mainloop()
+```
+
+Metodą `pack` pusługujemy się jak w przypadku innych elementów.
+
+```python
+button.pack(anchor = "center", pady = 30)
+```
+
+Oczywiście możliwa jest obsługa zdarzenia naciśnięcia stworzonego przycisku.
+
+```python
+def clicked ():
+
+    print("Clicked!")
+
+button = tkinter.Button(root, text = "Button", command = clicked)
+```
+
+Podczas tworzenia przycisku, przy pomocy parametru `command`, wystarczy podać nazwę funkcji, która ma się wykonać po jego wciśnięciu.
+
+```python
+tkinter.Button(root, text = "Exit", command = root.destroy)
+```
+
+Przykładem może być wbudowana metoda `destroy`, odpowiadająca za zamknięcie okna.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("Sample title")
+
+label = tkinter.Label(root, text = "Text")
+
+label.pack()
+
+def clicked ():
+
+    label.config(text = "Another text")
+
+button = tkinter.Button(root, text = "Button", command = clicked)
+
+button.pack()
+
+root.mainloop()
+```
+
+Przydatna może okazać się również możliwość modyfikowaniu stworzonych wcześniej elementów. Odbywa się to przy pomocy metody `config`.
+
+## Polecenia - aplikacje okienkowe
+
+1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
+2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
