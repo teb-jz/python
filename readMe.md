@@ -1,4 +1,4 @@
-# Spis treści
+# Spis treści<!-- omit in toc -->
 
 1. [Wprowadzenie](#wprowadzenie)
     - [Podstawowy program](#podstawowy-program)
@@ -54,6 +54,8 @@ Python to język programowania wysokiego poziomu, ogólnego przeznaczenia. Jego 
 print("Hello world!")
 ```
 
+<p align = "right">1.1. Przykładowa instrukcja</p>
+
 Powyższy program ma za zadanie wypisać, przy pomocy *funkcji* `print`, podany pomiędzy nawiasami okrągłymi napis. Jak widać, struktura programu jest znacznie prostsza niż w przypadku większości języków programowania.
 
 > Kolejną istotną różnią jest brak średników kończących daną instrukcję.
@@ -68,6 +70,8 @@ print("Inny", "przykładowy", "tekst")
 print('To również napis')
 ```
 
+<p align = "right">1.2. Wyświetlanie tekstu</p>
+
 Język Python pozwala na dwa główne sposoby deklarowania napisów. Do tworzenia ciągów znaków można wykorzystać **apostrofy** lub **cudzysłowy**. W większości języków apostrof zarezerwowany jest dla pojedynczych znaków.
 
 **Łańcuchy znaków** można poddać **konkatenacji**, czyli ich łączeniu, sklejaniu ze sobą. W tym celu wykorzystuje się dwuargumentowy operator `+`. Wynikiem jest nowy ciąg znaków.
@@ -80,6 +84,8 @@ Funkcja `print` pozwala na przekazanie kilku argumentów, oddzielonych przecinka
 print("Przykładowy tekst.") # Przykładowa instrukcja
 # print("Inny przykładowy tekst.")
 ```
+
+<p align = "right">1.3. Komentarze</p>
 
 Komentarze nie są brane pod uwagę w trakcie działania programu. Mogą okazać się pomocne przy opisie kodu, czy poszczególnych instrukcji lub tymczasowej zmiany działania programu.
 
@@ -125,6 +131,8 @@ anotherFraction = .37 # float
 statement = True # bool
 ```
 
+<p align = "right">2.1. Podstawowe typy danych</p>
+
 ## Definicja zmiennej
 
 W języku Python nie możemy zdefiniować zmiennej bez jej inicjalizacji, czyli przypisania wartości początkowej. Na początek odwołujemy się do nazwy symbolicznej, operatorem przypisania jest `=`, po którym następuje podanie wartości.
@@ -162,6 +170,8 @@ print("Suma:", result)
 print("Ta sama suma:", a + b)
 ```
 
+<p align = "right">3.1. Operacje arytmetyczne</p>
+
 > W celu wyświetlenia wartości zmiennej odwołujemy się do jej nazwy symbolicznej i podajemy ją jako arguement funkcji `print`.
 
 Powyższy przykład przedstawia dodawanie dwóch liczb. Na początku definiujemy dwie zmienne i inicjalizujemy je ustalonymi wartościami całkowitymi. W celu wyświetlenia sumy (wyniku dodawania) możemy zadeklarować kolejną zmienną, ale możemy również wykonać operację bezpośrednio w nawiasach funkcji `print`.
@@ -176,6 +186,8 @@ number = number + 2
 
 print(number)
 ```
+
+<p align = "right">3.2. Operacje przypisania</p>
 
 Przykładowo, liczbę możemy nadpisać wartością o *2* większą, przypisując jej nową wartość w postaci sumy jej starej wartości i liczby *2*. Taki zapis można skrócić przy pomocy danych operatorów:
 - `+=`,
@@ -193,6 +205,8 @@ number += 2
 print(number)
 ```
 
+<p align = "right">3.3. Dodatkowe operacje przypisania</p>
+
 Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzednim. W obu wypadkach zwiększamy liczbę o *2*.
 
 > Szczególnym przypadkiem zmiany wartości jest zwiększenie lub zmniejszenie jej o 1. Mowa wtedy odpowednio o **inkrementacji** oraz **dekrementacji**. W większości języków, poza Python, istnieją dla nich oddzielnie operatory.
@@ -207,6 +221,8 @@ value = input("Wprowadź wartość: ")
 print("Podana wartość to:", value)
 ```
 
+<p align = "right">4.1. Wprowadzanie wartości</p>
+
 Za pobieranie wartości wprowadzanych przez użytkownika za pośrednictwem klawiatury odpowiada funkcja `input`. Jako argument możemy podać napis, który wyświetli się w konsoli. Może mieć za zadanie na przykład poinformowanie użytkownika o spodziewanej akcji. Funkcja zwraca wartość wprowadzoną przed kliknięciem przycisku enter. Jeżeli chcemy z niej skorzystać na dalszym etapie programu, musimy przypisać ją do zmiennej.
 
 ```python
@@ -215,6 +231,8 @@ y = input("Wprowadź drugą liczbę: ")
 
 print("Suma liczb wynosi:", x + y)
 ```
+
+<p align = "right">4.2. Przetwarzanie wprowadzanych wartości</p>
 
 W powyższym przykładzie pomimo próby wprowadzenia liczb, wyświetlony napis nie będzie oczekiwanym wynikiem. W tym przypadku znak `+` nie oznacza dodawania, a **konkatenację**, w związku z tym zmienne zawierają ciągi znaków, a nie liczby.
 
@@ -236,6 +254,8 @@ number = int(text)
 print(number ** 2)
 ```
 
+<p align = "right">4.3. Rzutowanie typów</p>
+
 Gdzie pomiędzy nawiasami okrągłymi wskazujemy to, co chcemy poddać konwersji.
 
 > W przypadku konwersji na typ logiczny przyjęło się założenie, że każda niezerowa lub niepusta wartość posiada wartość `True`, a zero lub na przykład pusty ciąg znaków - wartość `False`.
@@ -248,6 +268,8 @@ fraction = float(text)
 
 print("Odwrotność danego ułamka to:", fraction ** -1)
 ```
+
+<p align = "right">4.4. Skrócony zapis konwersji</p>
 
 Powyższy zapis można skrócić podając pomiędzy nawiasy funkcji `float` wartość podaną przez użytkownika, czyli wywołanie funkcji `input`.
 
@@ -271,6 +293,8 @@ condition = True
 if condition:
     print("Warunek jest spełniony")
 ```
+
+<p align = "right">5.1. Instrukcja warunkowa</p>
 
 Po słowie kluczowym `if` następuje **warunek**, linię kończymy znakiem dwukropka, który wyznacza **blok kodu** Wszystkie instrukcje, które mają zostać wykonane w obrębie instrukcji warunkowej (mają zostać wykonane pod warunkiem) posiadają wcięcie. Warunkiem może być zmienna lub całe wyrażenie.
 
@@ -298,6 +322,8 @@ if age >= 18:
     print("Osoba jest pełnoletnia")
 ```
 
+<p align = "right">5.2. Porównywanie wartości</p>
+
 Operatory relacyjne zwracają określoną wartość logiczną, zatem mogą służyć formułowaniu warunków.
 
 ## Warunki złożone
@@ -317,6 +343,8 @@ if x == 2 or x == -2:
     print("Moduł liczby x wynosi 2.")
 ```
 
+<p align = "right">5.3. Warunki złożone</p>
+
 Powyższy warunek jest spełniony, gdy dana liczba jest równa *2* lub *-2*
 
 ## Konstrukcja instrukcji warunkowej
@@ -333,6 +361,8 @@ elif number < 0:
 else:
     print("Liczba jest równa 0.")
 ```
+
+<p align = "right">5.4. Konstrukcja instrukcji warunkowej</p>
 
 Po instrukcji `if` można dodawać warunki alternatywne za pośrednictwem instrukcji `elif`. Na samym końcu można dodatkowo zdefiniować działanie dla pozostałych przypadków - czyli sytuacji, w której żaden z poprzednich warunków nie został spełniony.
 
@@ -356,6 +386,8 @@ match term:
     case _:
         print("Wprowadzono inną wartość.")
 ```
+
+<p align = "right">5.5. Instrukcja Switch</p>
 
 Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o przeprowadzonych operacjach. W zależności od jej wartości wybierany jest odpowiedni przypadek - `case`. Na końcu umieszczamy przypadek domyślny - znak `_` ozncza w tym przypadku dowolną inną wartość.
 
@@ -390,6 +422,8 @@ while number > 0:
     number -= 1
 ```
 
+<p align = "right">6.1. Pętla While</p>
+
 Na powyższym przykładzie pętla wykonywana jest dopóki wartość zmiennej liczbowej `number` jest dodatnia. Zmienna posiada wartość przypisaną przed wywołaniem pętli. Wewnątrz pętli wartość jest zmieniana (w tym przypadku następuje `dekrementacja`).
 
 ## Pętla for
@@ -408,6 +442,8 @@ for character in text:
     print(character)
 ```
 
+<p align = "right">6.2. Pętla For</p>
+
 Po słowie kluczowym `for` należy zadeklarować zmienną, która w poszczególnych iteracjach pętli będzie przyjmowała kolejne wartości z sekwencji. W powyższym przykładzie są to pojedyncze znaki z przykładowego napisu.
 
 ```python
@@ -417,6 +453,8 @@ for number in someRange:
 
     print(number)
 ```
+
+<p align = "right">6.3. Iterowanie po sekwencjach</p>
 
 Funkcja `range` zwraca sekwencję liczb (zakres), którą możemy posłużyć się w pętli `for`. Pomiędzy nawiasami, jako argument, podajemy koniec interesującego nas przedziału.
 
@@ -428,6 +466,8 @@ for number in someRange:
     if 3 < number and number <= 6:
         print(number)
 ```
+
+<p align = "right">6.4. Przykład zagnieżdżania instrukcji</p>
 
 ## Instrukcja Break
 
@@ -443,6 +483,8 @@ for number in someRange:
 
     print(number)
 ```
+
+<p align = "right">6.5. Instrukcja Break</p>
 
 ## Polecenia - pętle
 
@@ -463,11 +505,15 @@ def showMessage ():
     print("Przykładowa wiadomość")
 ```
 
+<p align = "right">7.1. Konstrukcja funkcji</p>
+
 Po słowie kluczowym `def`, podobnie jak w przypadku zmiennej, musimy podać nazwę symboliczną. Po niej znajduje się nawias okrągły, w którym można określać **parametry** przyjmowane przez tę funkcję.
 
 ```python
 showMessage()
 ```
+
+<p align = "right">7.2. Wywoływanie funkcji</p>
 
 Napisanie **definicji funkcji** nie jest wystarczające, by zawarte w niej instrukcje zostały wykonane. Funkcję wywołujemy w odpowiednim miejscu, odwołując się do jej nazwy symbolicznej.
 
@@ -477,6 +523,8 @@ def showSum (a, b):
 
 showSum(2, 1)
 ```
+
+<p align = "right">7.3. Wywoływanie funkcji dla zadanych argumentów</p>
 
 Jeżeli funkcja przyjmuje parametry, należy je przekazać podczas wywołania. Mowa wtedy o **argumentach**.
 
@@ -491,6 +539,8 @@ y = 7
 
 showSum(x, y)
 ```
+
+<p align = "right">7.4. Przekazywanie zmiennych jako argumentów funkcji</p>
 
 Jako parametry funkcji przekazywane są zazwyczaj zmienne o określonych wcześniej wartościach.
 
@@ -511,6 +561,8 @@ s = sum(x, y)
 print(s)
 ```
 
+<p align = "right">7.5. Zwracanie wartości przez funkcję</p>
+
 By wykorzystać zwróconą wartość można ją na przykład przypisać do zmiennej.
 
 ```python
@@ -524,6 +576,8 @@ y = int(input("Podaj y: "))
 
 print(sum(x, y))
 ```
+
+<p align = "right">1.1. Przechwytywanie wartości funkcji</p>
 
 Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń, a zwracaną wartość można wykorzystać bezpośrednio w danym wyrażeniu, bez konieczności przypisywania jej wcześniej do zmiennej.
 
@@ -553,6 +607,8 @@ matrix = [
 idk = ["sample", 8, "tekst"]
 ```
 
+<p align = "right">8.1. Deklaracja listy</p>
+
 Elementami list mogą być typy proste lub inne typy złożone, na przykład kolejne listy.
 
 ## Indeksowanie
@@ -569,6 +625,8 @@ firstNumber = numbers[0]
 print("Pierwsza liczba: ", firstNumber)
 ```
 
+<p align = "right">8.2. Odwołanie do elementu listy</p>
+
 Chcąc odwołać się do danego elementu listy, podajemy nazwę symboliczną zmiennej przechowującej listę i nawiasy kwadratowe z konkretnym indeksem.
 
 ```python
@@ -578,6 +636,8 @@ print("Druga litera:", letters[1])
 print("Ostatnia litera:", letters[-1])
 print("Przedostatnia litera:", letters[-2])
 ```
+
+<p align = "right">8.3. Alternatywne odwołania do indeksów listy</p>
 
 Python umożliwia również wygodne odwoływanie się do elementów zaczynając od końca listy, poprzez podanie ujemnego indeksu. Tym razem zaczynamy od *-1* i schodzimy w dół.
 
@@ -590,6 +650,8 @@ count = len(numbers)
 
 print("Długość listy:", count)
 ```
+
+<p align = "right">8.4. Długość listy</p>
 
 Korzystając z wbudowanej funkcji `len` możemy pobrać długość danej listy.
 
@@ -610,6 +672,8 @@ for number in numbers:
     print(number)
 ```
 
+<p align = "right">8.5. Iterowanie po elementach listy</p>
+
 W powyższym przykładzie zmienna `number` przyjmuje jako wartość kolejno wszystkie elementy z listy `numbers`.
 
 ```python
@@ -621,6 +685,8 @@ for index in range(length):
 
     print("Element o indeksie", index, "wynosi:", numbers[index])
 ```
+
+<p align = "right">8.6. Iterowanie po indeksach listy</p>
 
 Do poszczególnych elementów możemy odwoływać się również za pośrednictwem indeksów.
 
@@ -637,6 +703,8 @@ while index < length:
     print("Element o indeksie", index, "wynosi:", numbers[index])
     index += 1
 ```
+
+<p align = "right">8.7. Iterowanie po indeksach przy pomocy pętli While</p>
 
 Adekwatnie dla pętli while. W tym przypadku nie jesteśmy w stanie iterować bezpośrednio po sekwencji, zatem musimy skorzystać z indeksów.
 
@@ -666,6 +734,8 @@ class Obj:
         print("Utworzono obiekt!")
 ```
 
+<p align = "right">9.1. Deklaracja klasy</p>
+
 Klasę definiujemy poprzez słowo klczowe `class` oraz podanie nazwy symbolicznej zakończonej dwukropkiem. Metodą, która zazwyczaj pojawia się w klasie jest `__init__`. Jest to tak zwany **konstruktor**. Jest on wywoływany, gdy tworzony jest obiekt.
 
 > Wszystkie metody zdefiniowane w klasie przyjmują przynajmniej jeden argument - `self`, jest on wymagany.
@@ -675,6 +745,8 @@ Oczywiście sama klasa to jedynie przepis. Należy jeszcze utworzyć na jej pods
 ```python
 obj = Obj()
 ```
+
+<p align = "right">9.2. Tworzenie obiektu na podstawie klasy</p>
 
 ## Pola
 
@@ -690,6 +762,8 @@ a = Circle()
 print(a.pi)
 ```
 
+<p align = "right">9.3. Odwołania do pól obiektu</p>
+
 Po utworzeniu obiektu możemy odwołać się do zawartych w nim danych.
 
 > Do składowych obiektów jak pola czy metody odwołujemy się po kropce.
@@ -699,6 +773,8 @@ Oczywiście mamy możliwość modyfikowania danych w obiekcie.
 ```python
 a.pi = 3.141593
 ```
+
+<p align = "right">9.4. Zarządzanie wartością pól obiektów</p>
 
 ## Metody
 
@@ -722,6 +798,8 @@ a = Circle(2)
 a.showLength()
 ```
 
+<p align = "right">9.5. Wywoływanie metod obiektu</p>
+
 Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`.
 
 ## Polecenia - klasy i obiekty
@@ -741,11 +819,15 @@ Jeżeli potrzebujemy funkcjonalności spoza biblioteki standardowej możemy pos�
 import tkinter as tk
 ```
 
+<p align = "right">10.1. Importowanie biblioteki</p>
+
 Rozpoczynamy od słowa kluczowego `import` i podajemy nazwę interesującej nas biblioteki. Opcjonalnie możemy ją skrócić określając alias słowem `as`.
 
 ```python
 from tkinter import ttk
 ```
+
+<p align = "right">10.2. Importowanie elementów bibliotek</p>
 
 W przypadku, gdy interesuje nas konkretny element biblioteki możemy go sprecyzować zaczynając od słowa `from`, podać nazwę biblioteki, a na koniec dany element.
 
@@ -761,6 +843,8 @@ root = tk.Tk()
 root.mainloop()
 ```
 
+<p align = "right">10.3. Tworzenie okna</p>
+
 Do stworzenia okna korzystamy z obiektu biblioteki *Tkinter*.
 
 ```python
@@ -773,6 +857,8 @@ root.title("Sample title")
 
 root.mainloop()
 ```
+
+<p align = "right">10.4. Zarządzanie własnościami okna</p>
 
 Do dyspozycji mamy metody, pozwalające na dostosowywanie okna. Między innymi jego wymiary oraz tytuł.
 
@@ -797,6 +883,8 @@ label.pack()
 root.mainloop()
 ```
 
+<p align = "right">10.5. Wypełnianie okna zawartością</p>
+
 Tworząc obiekt podajemy element nadrzędny oraz dodatkowe opcje, takie jak `text`.
 
 Do umieszczenie elementu w oknie możemy skorzystać z metody `pack`.
@@ -804,6 +892,8 @@ Do umieszczenie elementu w oknie możemy skorzystać z metody `pack`.
 ```python
 label.pack(side = "left")
 ```
+
+<p align = "right">10.6. Zarządzanie układem elementów</p>
 
 Poprzez podanie odpowiednich parametrów można dodatkowo zarządzać sposobem wyświetlania elementu.
 
@@ -826,11 +916,15 @@ button.pack()
 root.mainloop()
 ```
 
+<p align = "right">10.7. Umieszczanie przycisków</p>
+
 Metodą `pack` pusługujemy się jak w przypadku innych elementów.
 
 ```python
 button.pack(anchor = "center", pady = 30)
 ```
+
+<p align = "right">10.8. Alternatywny sposób pozycjonowania elementów</p>
 
 Oczywiście możliwa jest obsługa zdarzenia naciśnięcia stworzonego przycisku.
 
@@ -842,11 +936,15 @@ def clicked ():
 button = tkinter.Button(root, text = "Button", command = clicked)
 ```
 
+<p align = "right">10.9. Nadawanie obsługi zdarzeń</p>
+
 Podczas tworzenia przycisku, przy pomocy parametru `command`, wystarczy podać nazwę funkcji, która ma się wykonać po jego wciśnięciu.
 
 ```python
 tkinter.Button(root, text = "Exit", command = root.destroy)
 ```
+
+<p align = "right">10.10. Zdarzenia wbudowane</p>
 
 Przykładem może być wbudowana metoda `destroy`, odpowiadająca za zamknięcie okna.
 
@@ -872,6 +970,8 @@ button.pack()
 
 root.mainloop()
 ```
+
+<p align = "right">10.11. Modyfikacja elementów</p>
 
 Przydatna może okazać się również możliwość modyfikowaniu stworzonych wcześniej elementów. Odbywa się to przy pomocy metody `config`.
 
