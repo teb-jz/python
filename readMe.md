@@ -979,3 +979,59 @@ Przydatna może okazać się również możliwość modyfikowaniu stworzonych wc
 
 1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
 2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
+
+### Pola wprowadzania
+
+W celu pobierania danych wprowadzanych przez użytkownika możemy wykorzystać klasę `Entry`.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("Sample title")
+
+entry = tkinter.Entry(root)
+
+entry.pack()
+
+def clicked ():
+
+    print(entry.get())
+    entry.delete(0, "end")
+
+button = tkinter.Button(root, text = "Button", command = clicked)
+
+button.pack()
+
+root.mainloop()
+```
+
+W powyższym programie naciśnięcie przycisku skutkuje wywołaniem funkcji `clicked`, która przy pomocy metody `get` pobiera dane z pola wprowadzania, a następnie je czyści metodą `delete` z odpowiednimi parametrami.
+
+### Ramki
+
+Ramki mogą opazać się pomocne podczas układanie elementów w oknie aplikacji. Dzięki nim, możemy podzielić interfejs na wydzielone obszarny.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("Sample title")
+
+tkinter.Label(root, text = "Text").pack()
+
+frame = tkinter.Frame(root, bg = "blue")
+
+tkinter.Label(frame, text = "Text").grid(column = 0, row = 1)
+tkinter.Label(frame, text = "Text").grid(column = 1, row = 0)
+
+frame.pack()
+
+root.mainloop()
+```
+
+Zaletą ramek jest możliwość korzystania z różnych sposobów układania elementów.
