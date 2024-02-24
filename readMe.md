@@ -40,6 +40,8 @@
     - [Importowanie bibliotek](#importowanie-bibliotek)
     - [Tworzenie okna](#tworzenie-okna)
     - [Elementy okna](#elementy-okna)
+    - [Pola wprowadzania](#pola-wprowadzania)
+    - [Ramki](#ramki)
     - [Polecenia](#polecenia---aplikacje-okienkowe)
 
 &nbsp;
@@ -975,14 +977,9 @@ root.mainloop()
 
 Przydatna może okazać się również możliwość modyfikowaniu stworzonych wcześniej elementów. Odbywa się to przy pomocy metody `config`.
 
-## Polecenia - aplikacje okienkowe
-
-1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
-2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
-
 ### Pola wprowadzania
 
-W celu pobierania danych wprowadzanych przez użytkownika możemy wykorzystać klasę `Entry`.
+W celu pobrania danych wprowadzonych przez użytkownika możemy wykorzystać klasę `Entry`.
 
 ```python
 import tkinter
@@ -1008,11 +1005,13 @@ button.pack()
 root.mainloop()
 ```
 
+<p align = "right">10.12. Pole wprowadzania</p>
+
 W powyższym programie naciśnięcie przycisku skutkuje wywołaniem funkcji `clicked`, która przy pomocy metody `get` pobiera dane z pola wprowadzania, a następnie je czyści metodą `delete` z odpowiednimi parametrami.
 
 ### Ramki
 
-Ramki mogą opazać się pomocne podczas układanie elementów w oknie aplikacji. Dzięki nim, możemy podzielić interfejs na wydzielone obszarny.
+Ramki mogą okazać się pomocne podczas układania elementów w oknie aplikacji. Dzięki nim, możemy podzielić interfejs na wydzielone obszarny.
 
 ```python
 import tkinter
@@ -1034,4 +1033,12 @@ frame.pack()
 root.mainloop()
 ```
 
+<p align = "right">10.13. Ramki</p>
+
 Zaletą ramek jest możliwość korzystania z różnych sposobów układania elementów.
+
+## Polecenia - aplikacje okienkowe
+
+1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
+2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
+3. Stworzyć kalkulator prosty.
