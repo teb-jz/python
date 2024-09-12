@@ -46,7 +46,7 @@
 
 &nbsp;
 
-# Wprowadzenie
+# 1. Wprowadzenie
 
 Python to język programowania wysokiego poziomu, ogólnego przeznaczenia. Jego składnia cechuje się przejrzystością i zwięzłością. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią.
 
@@ -93,7 +93,7 @@ Komentarze nie są brane pod uwagę w trakcie działania programu. Mogą okazać
 
 &nbsp;
 
-# Zmienna
+# 2. Zmienna
 
 **Zmienna** to pewne wydzielone miejsce w pamięci komputera, gdzie mogą być przechowywane dane, między innymi wyniki wykonywanych operacji. Wartością zmiennej może być na przykład liczba lub ciąg znaków. Zmienna musi posiadać nazwę symboliczną, przez którą można odwoływać się do niej w programie.
 
@@ -147,7 +147,7 @@ W języku Python nie możemy zdefiniować zmiennej bez jej inicjalizacji, czyli 
 
 &nbsp;
 
-# Operatory arytmetyczne
+# 3. Operatory arytmetyczne
 
 Podobnie jak inne języki, Python oferuje kilka podstawowych operatorów arytmetycznych, znanych z matematyki:
 - `+` - dodawanie,
@@ -215,7 +215,7 @@ Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzedni
 
 &nbsp;
 
-# Komunikacja z użytkownikiem
+# 4. Komunikacja z użytkownikiem
 
 ```python
 value = input("Wprowadź wartość: ")
@@ -278,12 +278,12 @@ Powyższy zapis można skrócić podając pomiędzy nawiasy funkcji `float` wart
 ## Polecenia - komunikacja z użytkownikiem
 
 1. Napisać program, który pobiera od użytkownika wartość całkowitą i wyświetla jej pierwiastek trzeciego stopnia.
-2. Napisać program, który pobiera od użytkownika dwie wartości liczbowe i wyświetla ich średnią arytmetyczną (sumę liczb podzieloną przez ich ilość).
+2. Napisać program, który pobiera od użytkownika dwie wartości liczbowe i wyświetla ich średnią arytmetyczną.
 3. Napisać program, który pobiera od użytkownika długość promienia pewnego okręgu i wyświetla jego pole powierzchni. Dla ułatwienia zakładamy, że wprowadzony promień nie będzie wartością ujemną.
 
 &nbsp;
 
-# Instrukcje warunkowe
+# 5. Instrukcje warunkowe
 
 **Instrukcje warunkowe** w programowaniu służą do warunkowego wykonywania instrukcji, w zależności od tego, czy dany warunek jest spełniony.
 
@@ -395,13 +395,13 @@ Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o
 
 ## Polecenia - instrukcje warunkowe
 
-1. Napisać program, który pobiera od użytkownika jego wiek (wartość całkowita) i wyświetla informację o jego pełnoletniości.
-2. Napisać program, który pobiera wartość całkowitą i wyświetla informację, w zależności czy podana liczba jest parzysta.
+1. Napisać program, który pobiera wartość całkowitą i wyświetla informację, czy podana liczba jest parzysta.
+2. Napisać program, który pobiera od użytkownika trzy wartości liczbowe i wyświetla je w kolejności rosnącej.
 3. Napisać kalkulator prosty z wykorzystaniem instrukcji `switch`. Użytkownik podaje dwie liczby "rzeczywiste" oraz znak (`+`, `-`, `*` lub `/`), który decyduje od przeprowadzonym działaniu, wyświetlany jest wynik.
 
 &nbsp;
 
-# Pętle
+# 6. Pętle
 
 Pętle w programowaniu służą do cyklicznego wykonywania ciągu instrukcji określoną liczbę razy.
 
@@ -490,13 +490,13 @@ for number in someRange:
 
 ## Polecenia - pętle
 
-1. Napisać program zawierający pętlę **while**, która wyświetla liczby z zakresu *od -10 do 15*.
-2. Napisać program zawierający pętlę **for**, która wyświetla liczby *nieparzyste* z zakresu *od 0 do 40*.
-3. Napisać program zawierający pętlę **for**, który wyświetli *5 pierwszych znaków* napisu *"Ala ma kota"*.
+1. Napisać program zawierający pętlę `while`, która wyświetla liczby z zakresu *od -10 do 15*.
+2. Napisać program zawierający pętlę `for`, która wyświetla liczby *nieparzyste* z zakresu *od 0 do 40*.
+3. Napisać program zawierający pętlę `for`, który wyświetli *5 pierwszych znaków* napisu *"Ala ma kota"*.
 
 &nbsp;
 
-# Funkcje
+# 7. Funkcje
 
 **Funkcja** to wydzielony fragment kodu, który można używać wielokrotnie w różnych miejscach programu.
 
@@ -579,7 +579,7 @@ y = int(input("Podaj y: "))
 print(sum(x, y))
 ```
 
-<p align = "right">1.1. Przechwytywanie wartości funkcji</p>
+<p align = "right">7.6. Przechwytywanie wartości funkcji</p>
 
 Zwracać można na przykład stałe, wartości zmiennych lub wartości wyrażeń, a zwracaną wartość można wykorzystać bezpośrednio w danym wyrażeniu, bez konieczności przypisywania jej wcześniej do zmiennej.
 
@@ -593,7 +593,7 @@ W przypadku dwóch ostatnich funkcji przekazanymi parametrami mają być wartoś
 
 &nbsp;
 
-# Listy
+# 8. Listy
 
 Jednym z przykładów wspomnianych wcześniej sekwencyjnych typów danych są listy. Można interpretować je jako uporządkowane zbiory pewnych elementów.
 
@@ -718,7 +718,7 @@ Mamy daną listę liczb całkowitych: `[-2, 3, 4, -1, 2, 0, 3, -7, 2, 5]`.
 - Przy pomocy pętli `while` wyświetlić z listy jedynie wartości parzyste.
 - Przy pomocy pętli `while` wyświetlić z listy co trzeci element.
 
-# Klasy i obiekty
+# 9. Klasy i obiekty
 
 **Obiekty** to struktury przechowujące pewne dane i posiadające zdefiniowane działanie. Dane, które można interpretować jako zmienne należące do obiektu nazywamy **polami**, a działanie, czyli inaczej funkcje zdefiniowane wewnątrz obiektu - **metodami**.
 
@@ -809,7 +809,7 @@ Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`
 1. Napisz deklarację klasy **Pojazd**, zawierającą przynajmniej trzy tematyczne pola oraz metodę wyświetlającą te dane.
 2. Napisz deklarację klasy **Kwadrat**, umożliwiającą sprecyzowanie długości boku. Ponadto ma zawierać metody wyświetlające pole danego kwadratu oraz całkowitą długość boków.
 
-# Aplikacje okienkowe
+# 10. Aplikacje okienkowe
 
 Biblioteka *Tkinter*, będąca standardowym interfejsem zestawu narzędzi *Tck/Tk*, odznacza się wieloplatformowością, co pozwala na korzystanie z programu na różnych systemach operacyjnych.
 
