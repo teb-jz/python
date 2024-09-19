@@ -46,6 +46,7 @@
 
 &nbsp;
 
+<a name = "wprowadzenie"></a>
 # 1. Wprowadzenie
 
 Python to język programowania wysokiego poziomu, ogólnego przeznaczenia. Jego składnia cechuje się przejrzystością i zwięzłością. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią.
@@ -93,6 +94,7 @@ Komentarze nie są brane pod uwagę w trakcie działania programu. Mogą okazać
 
 &nbsp;
 
+<a name = "zmienna"></a>
 # 2. Zmienna
 
 **Zmienna** to pewne wydzielone miejsce w pamięci komputera, gdzie mogą być przechowywane dane, między innymi wyniki wykonywanych operacji. Wartością zmiennej może być na przykład liczba lub ciąg znaków. Zmienna musi posiadać nazwę symboliczną, przez którą można odwoływać się do niej w programie.
@@ -147,6 +149,7 @@ W języku Python nie możemy zdefiniować zmiennej bez jej inicjalizacji, czyli 
 
 &nbsp;
 
+<a name = "operatory-arytmetyczne"></a>
 # 3. Operatory arytmetyczne
 
 Podobnie jak inne języki, Python oferuje kilka podstawowych operatorów arytmetycznych, znanych z matematyki:
@@ -215,6 +218,7 @@ Powyższy zapis jest równoważny. Wynik działania będzie identyczny poprzedni
 
 &nbsp;
 
+<a name = "komunikacja-z-użytkownikiem"></a>
 # 4. Komunikacja z użytkownikiem
 
 ```python
@@ -283,6 +287,7 @@ Powyższy zapis można skrócić podając pomiędzy nawiasy funkcji `float` wart
 
 &nbsp;
 
+<a name = "instrukcje-warunkowe"></a>
 # 5. Instrukcje warunkowe
 
 **Instrukcje warunkowe** w programowaniu służą do warunkowego wykonywania instrukcji, w zależności od tego, czy dany warunek jest spełniony.
@@ -370,7 +375,7 @@ Po instrukcji `if` można dodawać warunki alternatywne za pośrednictwem instru
 
 &nbsp;
 
-# Switch
+## Switch
 
 W przypadku bardzo precyzyjnych warunków instrukcje warunkowe mogą okazać się niewystarczająco czytelne. Alternatywą może być konstrukcja `switch`, dostępna w języku Python od wersji *3.10*.
 
@@ -401,6 +406,7 @@ Po słowie kluczowym `match` wskazujemy zmienną, której wartość zadecyduje o
 
 &nbsp;
 
+<a name = "pętle"></a>
 # 6. Pętle
 
 Pętle w programowaniu służą do cyklicznego wykonywania ciągu instrukcji określoną liczbę razy.
@@ -496,6 +502,7 @@ for number in someRange:
 
 &nbsp;
 
+<a name = "funkcje"></a>
 # 7. Funkcje
 
 **Funkcja** to wydzielony fragment kodu, który można używać wielokrotnie w różnych miejscach programu.
@@ -593,6 +600,7 @@ W przypadku dwóch ostatnich funkcji przekazanymi parametrami mają być wartoś
 
 &nbsp;
 
+<a name = "listy"></a>
 # 8. Listy
 
 Jednym z przykładów wspomnianych wcześniej sekwencyjnych typów danych są listy. Można interpretować je jako uporządkowane zbiory pewnych elementów.
@@ -718,6 +726,7 @@ Mamy daną listę liczb całkowitych: `[-2, 3, 4, -1, 2, 0, 3, -7, 2, 5]`.
 - Przy pomocy pętli `while` wyświetlić z listy jedynie wartości parzyste.
 - Przy pomocy pętli `while` wyświetlić z listy co trzeci element.
 
+<a name = "klasy-i-obiekty"></a>
 # 9. Klasy i obiekty
 
 **Obiekty** to struktury przechowujące pewne dane i posiadające zdefiniowane działanie. Dane, które można interpretować jako zmienne należące do obiektu nazywamy **polami**, a działanie, czyli inaczej funkcje zdefiniowane wewnątrz obiektu - **metodami**.
@@ -809,6 +818,7 @@ Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`
 1. Napisz deklarację klasy **Pojazd**, zawierającą przynajmniej trzy tematyczne pola oraz metodę wyświetlającą te dane.
 2. Napisz deklarację klasy **Kwadrat**, umożliwiającą sprecyzowanie długości boku. Ponadto ma zawierać metody wyświetlające pole danego kwadratu oraz całkowitą długość boków.
 
+<a name = "aplikacje-okienkowe"></a>
 # 10. Aplikacje okienkowe
 
 Biblioteka *Tkinter*, będąca standardowym interfejsem zestawu narzędzi *Tck/Tk*, odznacza się wieloplatformowością, co pozwala na korzystanie z programu na różnych systemach operacyjnych.
