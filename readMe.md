@@ -1047,8 +1047,126 @@ root.mainloop()
 
 Zaletą ramek jest możliwość korzystania z różnych sposobów układania elementów.
 
+### Przycisk wyboru
+
+Przyciski wyboru stosujemy, gdy chcemy umożliwić zaznaczenie kilku opcji.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x50")
+root.title("")
+
+checkbox1 = tkinter.Checkbutton(root, text = "Option 1", offvalue = 0, onvalue = 1)
+checkbox2 = tkinter.Checkbutton(root, text = "Option 2", offvalue = 0, onvalue = 1)
+
+checkbox1.pack()
+checkbox2.pack()
+
+root.mainloop()
+```
+
+<p align = "right">10.14. Przycisk wyboru</p>
+
+### Przycisk opcji
+
+Przyciski opcji, w przeciwieństwie do przycisków wyboru, umożliwiają zaznaczenie tylko jednego z elementów.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x50")
+root.title("")
+
+radiobutton1 = tkinter.Radiobutton(root, text = "Option 1", value = 1)
+radiobutton2 = tkinter.Radiobutton(root, text = "Option 2", value = 2)
+
+radiobutton1.pack()
+radiobutton2.pack()
+
+root.mainloop()
+```
+
+<p align = "right">10.15. Przycisk opcji</p>
+
+### Wartości przycisków wyboru i opcji
+
+W celu odwołania się do wartości przycisku opcji lub wyboru należy wprowadzić dodatkową zmienną.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("")
+
+v1 = tkinter.BooleanVar()
+v2 = tkinter.BooleanVar()
+
+checkbox1 = tkinter.Checkbutton(root, text = "Option 1", variable = v1)
+checkbox2 = tkinter.Checkbutton(root, text = "Option 2", variable = v2)
+
+def click ():
+
+    print(v1.get(), v2.get())
+
+button = tkinter.Button(root, text = "Submit", command = click)
+
+checkbox1.pack()
+checkbox2.pack()
+button.pack()
+
+root.mainloop()
+```
+
+Po stworzeniu zmiennej przypisujemy ją do elementu przy pomocy argumentu `variable`. W celu odczytania jej wartości korzystamy z metody `get`.
+
+<p align = "right">10.16. Wartość przycisku wyboru</p>
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("")
+
+v = tkinter.IntVar()
+v.set(1)
+
+radiobutton1 = tkinter.Radiobutton(root, text = "Option 1", value = 1, variable = v)
+radiobutton2 = tkinter.Radiobutton(root, text = "Option 2", value = 2, variable = v)
+
+def click ():
+
+    print(v.get())
+
+button = tkinter.Button(root, text = "Submit", command = click)
+
+radiobutton1.pack()
+radiobutton2.pack()
+button.pack()
+
+root.mainloop()
+```
+
+<p align = "right">10.17. Wartość przycisku opcji</p>
+
+Tkinter oferuje klika klas zmiennych reprezentujących podstawowe typy danych:
+- `StringVar` - ciąg znaków,
+- `IntVar` - liczba całkowita,
+- `DoubleVar` - liczba "rzeczywista",
+- `BooleanVar` - wartość logiczna.
+
 ## Polecenia - aplikacje okienkowe
 
 1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
 2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
-3. Stworzyć kalkulator prosty.
+3. Stworzyć kalkulator prosty składający się z trzech pól wprowadzania, przycisku oraz etykiety, w której zostanie wyświetlony wynik wybranej operacji.
+4. Zmodyfikować klakulator prosty, aby wybór znaku odbywał się za pośrednictwem przycisków opcji.
+5. Zmodyfikować klakulator prosty, aby wybór znaku odbywał się za pośrednictwem przycisków wyboru.
