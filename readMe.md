@@ -42,6 +42,9 @@
     - [Elementy okna](#elementy-okna)
     - [Pola wprowadzania](#pola-wprowadzania)
     - [Ramki](#ramki)
+    - [Przycisk wyboru](#przycisk-wyboru)
+    - [Przycisk opcji](#przycisk-opcji)
+    - [Wartości przycisków wyboru i opcji](#wartości-przycisków-wyboru-i-opcji)
     - [Polecenia](#polecenia---aplikacje-okienkowe)
 
 &nbsp;
