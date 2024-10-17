@@ -36,16 +36,22 @@
     - [Pola](#pola)
     - [Metody](#metody)
     - [Polecenia](#polecenia---klasy-i-obiekty)
-10. [Aplikacje okienkowe](#aplikacje-okienkowe)
-    - [Importowanie bibliotek](#importowanie-bibliotek)
-    - [Tworzenie okna](#tworzenie-okna)
-    - [Elementy okna](#elementy-okna)
-    - [Pola wprowadzania](#pola-wprowadzania)
-    - [Ramki](#ramki)
-    - [Przycisk wyboru](#przycisk-wyboru)
-    - [Przycisk opcji](#przycisk-opcji)
-    - [Wartości przycisków wyboru i opcji](#wartości-przycisków-wyboru-i-opcji)
-    - [Polecenia](#polecenia---aplikacje-okienkowe)
+10. [Aplikacje okienkowe](#101-aplikacje-okienkowe)
+    1.  [Aplikacje okienkowe](#101-aplikacje-okienkowe)
+        - [Importowanie bibliotek](#importowanie-bibliotek)
+        - [Tworzenie okna](#tworzenie-okna)
+        - [Elementy okna #1](#elementy-okna-1)
+        - [Ramki](#ramki)
+        - [Polecenia #1](#polecenia---aplikacje-okienkowe-1)
+    2. [Komunikacja z użytkownikiem](#102-komunikacja-z-użytkownikiem)
+        - [Elementy okna #2](#elementy-okna-2)
+        - [Wartości przycisków wyboru i opcji](#wartości-przycisków-wyboru-i-opcji)
+        - [Polecenia #2](#polecenia---aplikacje-okienkowe-2)
+    3. [Układanie elementów okna](#103-układanie-elementów-okna)
+        - [Pack](#pack)
+        - [Grid](#grid)
+        - [Place](#place)
+        - [Polecenia #3](#polecenia---aplikacje-okienkowe-3)
 
 &nbsp;
 
@@ -822,7 +828,7 @@ Przy odwoływaniu się do pól wewnątrz klasy używamy słowa kluczowego `self`
 2. Napisz deklarację klasy **Kwadrat**, umożliwiającą sprecyzowanie długości boku. Ponadto ma zawierać metody wyświetlające pole danego kwadratu oraz całkowitą długość boków.
 
 <a name = "aplikacje-okienkowe"></a>
-# 10. Aplikacje okienkowe
+# 10.1. Aplikacje okienkowe
 
 Biblioteka *Tkinter*, będąca standardowym interfejsem zestawu narzędzi *Tck/Tk*, odznacza się wieloplatformowością, co pozwala na korzystanie z programu na różnych systemach operacyjnych.
 
@@ -834,7 +840,7 @@ Jeżeli potrzebujemy funkcjonalności spoza biblioteki standardowej możemy pos�
 import tkinter as tk
 ```
 
-<p align = "right">10.1. Importowanie biblioteki</p>
+<p align = "right">10.1.1. Importowanie biblioteki</p>
 
 Rozpoczynamy od słowa kluczowego `import` i podajemy nazwę interesującej nas biblioteki. Opcjonalnie możemy ją skrócić określając alias słowem `as`.
 
@@ -842,7 +848,7 @@ Rozpoczynamy od słowa kluczowego `import` i podajemy nazwę interesującej nas 
 from tkinter import ttk
 ```
 
-<p align = "right">10.2. Importowanie elementów bibliotek</p>
+<p align = "right">10.1.2. Importowanie elementów bibliotek</p>
 
 W przypadku, gdy interesuje nas konkretny element biblioteki możemy go sprecyzować zaczynając od słowa `from`, podać nazwę biblioteki, a na koniec dany element.
 
@@ -858,7 +864,7 @@ root = tk.Tk()
 root.mainloop()
 ```
 
-<p align = "right">10.3. Tworzenie okna</p>
+<p align = "right">10.1.3. Tworzenie okna</p>
 
 Do stworzenia okna korzystamy z obiektu biblioteki *Tkinter*.
 
@@ -873,11 +879,12 @@ root.title("Sample title")
 root.mainloop()
 ```
 
-<p align = "right">10.4. Zarządzanie własnościami okna</p>
+<p align = "right">10.1.4. Zarządzanie własnościami okna</p>
 
 Do dyspozycji mamy metody, pozwalające na dostosowywanie okna. Między innymi jego wymiary oraz tytuł.
 
-## Elementy okna
+<a name = "elementy-okna-1"></a>
+## Elementy okna #1
 
 ### Etykiety
 
@@ -898,7 +905,7 @@ label.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.5. Wypełnianie okna zawartością</p>
+<p align = "right">10.1.5. Wypełnianie okna zawartością</p>
 
 Tworząc obiekt podajemy element nadrzędny oraz dodatkowe opcje, takie jak `text`.
 
@@ -908,7 +915,7 @@ Do umieszczenie elementu w oknie możemy skorzystać z metody `pack`.
 label.pack(side = "left")
 ```
 
-<p align = "right">10.6. Zarządzanie układem elementów</p>
+<p align = "right">10.1.6. Zarządzanie układem elementów</p>
 
 Poprzez podanie odpowiednich parametrów można dodatkowo zarządzać sposobem wyświetlania elementu.
 
@@ -931,7 +938,7 @@ button.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.7. Umieszczanie przycisków</p>
+<p align = "right">10.1.7. Umieszczanie przycisków</p>
 
 Metodą `pack` pusługujemy się jak w przypadku innych elementów.
 
@@ -939,7 +946,7 @@ Metodą `pack` pusługujemy się jak w przypadku innych elementów.
 button.pack(anchor = "center", pady = 30)
 ```
 
-<p align = "right">10.8. Alternatywny sposób pozycjonowania elementów</p>
+<p align = "right">10.1.8. Alternatywny sposób pozycjonowania elementów</p>
 
 Oczywiście możliwa jest obsługa zdarzenia naciśnięcia stworzonego przycisku.
 
@@ -951,7 +958,7 @@ def clicked ():
 button = tkinter.Button(root, text = "Button", command = clicked)
 ```
 
-<p align = "right">10.9. Nadawanie obsługi zdarzeń</p>
+<p align = "right">10.1.9. Nadawanie obsługi zdarzeń</p>
 
 Podczas tworzenia przycisku, przy pomocy parametru `command`, wystarczy podać nazwę funkcji, która ma się wykonać po jego wciśnięciu.
 
@@ -959,7 +966,7 @@ Podczas tworzenia przycisku, przy pomocy parametru `command`, wystarczy podać n
 tkinter.Button(root, text = "Exit", command = root.destroy)
 ```
 
-<p align = "right">10.10. Zdarzenia wbudowane</p>
+<p align = "right">10.1.10. Zdarzenia wbudowane</p>
 
 Przykładem może być wbudowana metoda `destroy`, odpowiadająca za zamknięcie okna.
 
@@ -986,9 +993,48 @@ button.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.11. Modyfikacja elementów</p>
+<p align = "right">10.1.11. Modyfikacja elementów</p>
 
 Przydatna może okazać się również możliwość modyfikowaniu stworzonych wcześniej elementów. Odbywa się to przy pomocy metody `config`.
+
+### Ramki
+
+Ramki mogą okazać się pomocne podczas układania elementów w oknie aplikacji. Dzięki nim, możemy podzielić interfejs na wydzielone obszarny.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x100")
+root.title("Sample title")
+
+tkinter.Label(root, text = "Text").pack()
+
+frame = tkinter.Frame(root, bg = "blue")
+
+tkinter.Label(frame, text = "Text").grid(column = 0, row = 1)
+tkinter.Label(frame, text = "Text").grid(column = 1, row = 0)
+
+frame.pack()
+
+root.mainloop()
+```
+
+<p align = "right">10.1.12. Ramki</p>
+
+Zaletą ramek jest możliwość korzystania z różnych sposobów układania elementów.
+
+## Polecenia - aplikacje okienkowe #1
+
+1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
+2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
+
+<a name = "komunikacja-z-uzytkownikiem"></a>
+# 10.2. Komunikacja z użytkownikiem
+
+<a name = "elementy-okna-2"></a>
+## Elementy okna #2
 
 ### Pola wprowadzania
 
@@ -1018,37 +1064,9 @@ button.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.12. Pole wprowadzania</p>
+<p align = "right">10.2.1. Pole wprowadzania</p>
 
 W powyższym programie naciśnięcie przycisku skutkuje wywołaniem funkcji `clicked`, która przy pomocy metody `get` pobiera dane z pola wprowadzania, a następnie je czyści metodą `delete` z odpowiednimi parametrami.
-
-### Ramki
-
-Ramki mogą okazać się pomocne podczas układania elementów w oknie aplikacji. Dzięki nim, możemy podzielić interfejs na wydzielone obszarny.
-
-```python
-import tkinter
-
-root = tkinter.Tk()
-
-root.geometry("200x100")
-root.title("Sample title")
-
-tkinter.Label(root, text = "Text").pack()
-
-frame = tkinter.Frame(root, bg = "blue")
-
-tkinter.Label(frame, text = "Text").grid(column = 0, row = 1)
-tkinter.Label(frame, text = "Text").grid(column = 1, row = 0)
-
-frame.pack()
-
-root.mainloop()
-```
-
-<p align = "right">10.13. Ramki</p>
-
-Zaletą ramek jest możliwość korzystania z różnych sposobów układania elementów.
 
 ### Przycisk wyboru
 
@@ -1071,7 +1089,7 @@ checkbox2.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.14. Przycisk wyboru</p>
+<p align = "right">10.2.2. Przycisk wyboru</p>
 
 ### Przycisk opcji
 
@@ -1094,9 +1112,9 @@ radiobutton2.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.15. Przycisk opcji</p>
+<p align = "right">10.2.3. Przycisk opcji</p>
 
-### Wartości przycisków wyboru i opcji
+## Wartości przycisków wyboru i opcji
 
 W celu odwołania się do wartości przycisku opcji lub wyboru należy wprowadzić dodatkową zmienną.
 
@@ -1129,7 +1147,7 @@ root.mainloop()
 
 Po stworzeniu zmiennej przypisujemy ją do elementu przy pomocy argumentu `variable`. W celu odczytania jej wartości korzystamy z metody `get`.
 
-<p align = "right">10.16. Wartość przycisku wyboru</p>
+<p align = "right">10.2.4. Wartość przycisku wyboru</p>
 
 ```python
 import tkinter
@@ -1158,7 +1176,7 @@ button.pack()
 root.mainloop()
 ```
 
-<p align = "right">10.17. Wartość przycisku opcji</p>
+<p align = "right">10.2.5. Wartość przycisku opcji</p>
 
 Tkinter oferuje klika klas zmiennych reprezentujących podstawowe typy danych:
 - `StringVar` - ciąg znaków,
@@ -1166,10 +1184,115 @@ Tkinter oferuje klika klas zmiennych reprezentujących podstawowe typy danych:
 - `DoubleVar` - liczba "rzeczywista",
 - `BooleanVar` - wartość logiczna.
 
-## Polecenia - aplikacje okienkowe
+<a name = "aplikacje-okienkowe-2"></a>
+## Polecenia - aplikacje okienkowe #2
 
-1. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"Text"* oraz przycisku opisanego jako *"Button"*. Elementy mają znajdować się po środku okna o wymiarach *300px x 300px* i tytule *"Title"*.
-2. Stworzyć aplikację okienkową złożoną z etykiety zawierającej tekst *"0"* i dwóch przycisków opisanych jako *"Increase"* i *"Exit"*. Po wciśnięciu pierwszego przycisku liczba widoczna na etykiecie ma zwiększyć się o *1*. Po wciśnięciu drugiego przycisku okno ma zostać zamknięte.
-3. Stworzyć kalkulator prosty składający się z trzech pól wprowadzania, przycisku oraz etykiety, w której zostanie wyświetlony wynik wybranej operacji.
-4. Zmodyfikować klakulator prosty, aby wybór znaku odbywał się za pośrednictwem przycisków opcji.
-5. Zmodyfikować klakulator prosty, aby wybór znaku odbywał się za pośrednictwem przycisków wyboru.
+1. Stworzyć kalkulator prosty składający się z trzech pól wprowadzania, przycisku oraz etykiety, w której zostanie wyświetlony wynik wybranej operacji.
+2. Zmodyfikować klakulator prosty, aby wybór znaku odbywał się za pośrednictwem przycisków opcji.
+3. Zmodyfikować klakulator prosty, aby wybór znaku odbywał się za pośrednictwem przycisków wyboru.
+
+<a name = "ukladanie-elementow-okna"></a>
+# 10.3. Układanie elementów okna
+
+Tkinter umożliwia układanie widgetów na kilka podstawowych sposobów.
+
+## Pack
+
+Układa elementy jeden po drugim, w pionie lub poziomie.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x200")
+root.title("")
+
+l1 = tkinter.Label(root, text = "1", bg = "red", height = 3, width = 6)
+l2 = tkinter.Label(root, text = "2", bg = "green", height = 3, width = 6)
+l3 = tkinter.Label(root, text = "3", bg = "blue", height = 3, width = 6)
+l4 = tkinter.Label(root, text = "4", bg = "yellow", height = 3, width = 6)
+
+l2.pack(side = "top")
+l1.pack(side = "left")
+l3.pack(side = "left")
+l4.pack(side = "right")
+
+root.mainloop()
+```
+
+<p align = "right">10.3.1. Pack</p>
+
+Sposób układania możemy kontrolować za pomocą argumentów:
+- `side` - *"top"*, *"right"*, *"bottom"*, *"left"*,
+- `fill` - *"x"*, *"y"*, *"both"*,
+- `expand` - *True*, *False*.
+
+## Grid
+
+Umożliwia układanie elementów w formie siatki.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x200")
+root.title("")
+
+l1 = tkinter.Label(root, text = "1", bg = "red", height = 3, width = 6)
+l2 = tkinter.Label(root, text = "2", bg = "green", height = 3, width = 6)
+l3 = tkinter.Label(root, text = "3", bg = "blue", height = 3, width = 6)
+l4 = tkinter.Label(root, text = "4", bg = "yellow", height = 3, width = 6)
+
+l1.grid(row = 0, column = 0)
+l2.grid(row = 0, column = 1)
+l3.grid(row = 0, column = 2)
+l4.grid(row = 1, column = 0, columnspan = 3)
+
+root.mainloop()
+```
+
+Pozycja określana jest przy pomocy argumentów `row` oraz `column`. Dodatkowo możemy łączyć wiersze lub kolumny korzystając z `rowspan` i `colspan`.
+
+<p align = "right">10.3.2. Grid</p>
+
+## Place
+
+Daje pełną kontrolę nad pozycjonowaniem elementów za pomocą współrzędnych wyrażonych w pikselach.
+
+```python
+import tkinter
+
+root = tkinter.Tk()
+
+root.geometry("200x200")
+root.title("")
+
+l1 = tkinter.Label(root, text = "1", bg = "red", height = 3, width = 6)
+l2 = tkinter.Label(root, text = "2", bg = "green", height = 3, width = 6)
+l3 = tkinter.Label(root, text = "3", bg = "blue", height = 3, width = 6)
+l4 = tkinter.Label(root, text = "4", bg = "yellow", height = 3, width = 6)
+
+l1.place(x = 10, y = 10)
+l2.place(x = 60, y = 40)
+l3.place(x = 10, y = 60)
+l4.place(x = 150, y = 145)
+
+root.mainloop()
+```
+
+Używany w przypadku specyficznego rozmieszczenia widżetów, gdzie inne metody mogą być niewystarczające.
+
+<p align = "right">10.3.3. Place</p>
+
+<a name = "aplikacje-okienkowe-3"></a>
+## Polecenia - aplikacje okienkowe #3
+
+Stworzyć poniższe layouty korzystając z `pack` i `grid` :
+1. \
+![Layout1](desktop1.png)
+1. \
+![Layout1](desktop2.png)
+1. \
+![Layout1](desktop3.png)
