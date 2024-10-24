@@ -52,6 +52,7 @@
         - [Grid](#grid)
         - [Place](#place)
         - [Polecenia #3](#polecenia---aplikacje-okienkowe-3)
+11. [Projekty](#11-projekty)
 
 &nbsp;
 
@@ -1296,3 +1297,21 @@ Stworzyć poniższe layouty korzystając z `pack` i `grid` :
 ![Layout1](desktop2.png)
 1. \
 ![Layout1](desktop3.png)
+
+&nbsp;
+
+<a name = "projekty"></a>
+# 11. Projekty
+
+## 1. Konwerter jednostek - długość
+
+Po wpisaniu wartości, zaznaczeniu jednej z podanych jednostek i naciśnięciu przycisku, program wylicza odpowiednie wartości dla pozostałych jednostek i wyświetla je poniżej. Wybór jednostki powinien odbywać się za pośrednictwem przycisków opcji. Dostępne jednostki powinny obejmować:
+ - milimetry (mm),
+ - centymetry (cm)
+ - decymetry (dm),
+ - metry (m),
+ - kilometry (km),
+ - cale (in),
+ - stopy (ft),
+ - jardy (yd),
+ - mile (mi).
