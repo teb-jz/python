@@ -1307,7 +1307,7 @@ Stworzyć poniższe layouty korzystając z `pack` i `grid` :
 
 Po wpisaniu wartości, zaznaczeniu jednej z podanych jednostek i naciśnięciu przycisku, program wylicza odpowiednie wartości dla pozostałych jednostek i wyświetla je poniżej. Wybór jednostki powinien odbywać się za pośrednictwem przycisków opcji. Dostępne jednostki powinny obejmować:
  - milimetry (mm),
- - centymetry (cm)
+ - centymetry (cm),
  - decymetry (dm),
  - metry (m),
  - kilometry (km),
