@@ -1315,3 +1315,20 @@ Po wpisaniu wartości, zaznaczeniu jednej z podanych jednostek i naciśnięciu p
  - stopy (ft),
  - jardy (yd),
  - mile (mi).
+
+## 2. Zgadywanka
+
+Aplikacja losuje liczbę z zakresu *[0; 100)*. Użytkownik wpisuje zgadywaną wartość do pola wprowadzania i klika przycisk. Poniżej przycisku wyświetla się informacja, jedna z trzech informacji:
+- użytkownik odgadł liczbę,
+- zgadywana liczba jest wyższa niż podana,
+- zgadywana liczba jest niższa niż podana.
+
+Poszczególne komunikaty powinny mieć adekwatne kolory. W celu wylosowania liczby można skorzystać z funkcji `randInt`.
+
+```python
+import random
+
+number = random.randint(0, 100)
+
+print(number)
+```
