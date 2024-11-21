@@ -1332,3 +1332,11 @@ number = random.randint(0, 100)
 
 print(number)
 ```
+
+## 3. Generator haseł
+
+Aplikacja losuje i wyświetla silne hasło. Użytkownik ma możliwość określenia długości hasła oraz jego składowych:
+- małe litery,
+- wielkie litery,
+- cyfry,
+- znaki specjalne.
