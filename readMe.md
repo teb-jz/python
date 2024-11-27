@@ -1340,3 +1340,15 @@ Aplikacja losuje i wyświetla silne hasło. Użytkownik ma możliwość określe
 - wielkie litery,
 - cyfry,
 - znaki specjalne.
+
+## 4. Kości
+
+Aplikacja symuluje wyniki rzutów różnych typów kostek do gier:
+- K4,
+- K6,
+- K8,
+- K10,
+- K12,
+- K20.
+
+Użytkownik określa liczbę rzutów i rodzaj kostki.
